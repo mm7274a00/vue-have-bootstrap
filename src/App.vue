@@ -1,11 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Header from "./components/Header.vue"
 </script>
 
 <template>
+  <div class="fullpage">
+  <Header /> 
   <RouterView />
+</div>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.fullpage{
+  padding-bottom: 20px;
+  border: 5px solid rgb(163, 198, 226);;
+}
 </style>

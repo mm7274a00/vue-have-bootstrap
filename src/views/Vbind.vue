@@ -5,6 +5,8 @@ export default {
                 title:"cool",
                 isRed:false,
                 isLarge:false,
+                styleArr:[],
+                imgText:"https://www.dogtime.com.tw/wp-content/uploads/2022/06/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220608113358.jpg",
             }
         }
 }
@@ -34,6 +36,18 @@ export default {
         }">在這裡</h2>
     <!--當isRed/isLarge，賦予class名稱-->
 
+    <!-- styleArr是變數，記得在data(){}中宣告並使他成為 空陣列 -->
+    <h3>class []</h3>
+    <label for="">Red</label>
+    <input type="checkbox" value="red" v-model="styleArr">
+    <label for="">Large</label>
+    <input type="checkbox" value="large" v-model="styleArr">
+    <label for="">bold</label>
+    <input type="checkbox" value="bold" v-model="styleArr">
+
+    <h2 :class="styleArr">在那裡</h2>
+
+    <img :src="imgText" alt="">
 </template>
 
 <style lang="scss" scoped>
@@ -48,5 +62,8 @@ p{
 }
 .large{
     font-size: 30pt;
+}
+.bold{
+    font-weight: 100;
 }
 </style>

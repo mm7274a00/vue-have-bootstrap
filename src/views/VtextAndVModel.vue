@@ -1,13 +1,15 @@
 <script>
+import test from "../components/test.vue"
 export default {
     data(){
         return{
             //V-text
             title:"Title",
-            address:"xxx",
+            address:"xxx路三號",
             info:{
                 name:"John",
-                age: 18
+                age: 18,
+                address:"xxx路三號",
             },
             //V-Model雙向綁定
             cool:"",
@@ -17,7 +19,7 @@ export default {
             numberText:"",
             trimText:"",
             checkText:[],
-            radioText:[]
+            radioText:[],
         }
     },
     components: {
@@ -32,12 +34,11 @@ export default {
 </script>
 
 <template>
-    <h1>V-text</h1>
-    <P>{{this.title}}</P>
-    <P v-text="info"></P>
+    <h1>V-text & V-model</h1>
+    <P>{{ this.title }}</P>
+    <P v-text="address"></P>
     <test v-text="address"/>
     
-    <br />
     <h1>V-Model</h1>
     <input type="text" v-modle="cool">
     <h4>{{ this.cool }}</h4>
@@ -82,4 +83,5 @@ export default {
     <p>{{ this.radioText }}</p>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

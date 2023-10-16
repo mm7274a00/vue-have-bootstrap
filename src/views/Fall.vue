@@ -34,7 +34,7 @@ export default {
             <a class="nav-link active home" aria-current="page" href="#"><p>首頁</p></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link build" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             建立
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -55,7 +55,7 @@ export default {
         </div>
     <div class="fallArea">
     <div class="fallImg" v-for="item in FallArr">
-    <img :src="item" alt="" style="width: 18rem ;height: auto ;border-radius: 15px;"></div>
+    <img :src="item" alt="" style="width: 20vw ;height: auto ;border-radius: 15px;"></div>
     </div>
 </template>
 
@@ -72,11 +72,15 @@ export default {
     //border: 2px solid black;
     margin-right: 20px;
 }
+.nav-link{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 40px;
+}
 .home{
     background-color: black;
     border-radius: 10px;
-    width: 60px;
-    text-align: center;
     p{
         color: white;
     }

@@ -1,5 +1,5 @@
 <script>
-import test from "../components/test.vue"
+import test from "../components/test.vue";
 export default {
     data(){
         return{
@@ -27,7 +27,7 @@ export default {
     },
     methods:{
         test(){
-            console.log("xxx")
+            console.log("xxxtest")
         }
     }
 }
@@ -37,8 +37,8 @@ export default {
     <h1>V-text & V-model</h1>
     <P>{{ this.title }}</P>
     <P v-text="address"></P>
-    <test v-text="address"/>
-    
+    <test v-text="address"/>   
+    <br />
     <h1>V-Model</h1>
     <input type="text" v-modle="cool">
     <h4>{{ this.cool }}</h4>

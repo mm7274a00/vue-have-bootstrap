@@ -14,18 +14,23 @@ import {RouterLink} from 'vue-router'
         <li class="nav-item">
             <a class="nav link active" aria-current="page" href="/Vtext">課程內容</a>
         </li>
-        <li class="nav-item">
-            <a class="nav link" href="#">Features</a>
+        <li class="nav-item dropdown">
+            <a class="practice link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Vue使用
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="down vfor" href="/Vfor">Vfor</a></li>
+            </ul>
         </li>
         <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             練習
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="practice green1" href="/Green1">前端練習1</a></li>
-            <li><a class="practice green1" href="/Green2">前端練習1(2)</a></li>
-            <li><a class="practice guessNumber link2" href="/GuessNumber">猜數字</a></li>
-            <li><a class="practice sweet" href="/Sweet">甜點</a></li>
+            <li><a class="down practice green1" href="/Green1">前端練習1</a></li>
+            <li><a class="down practice green1" href="/Green2">前端練習1(2)</a></li>
+            <li><a class="down practice guessNumber link2" href="/GuessNumber">猜數字</a></li>
+            <li><a class="down practice sweet" href="/Sweet">甜點</a></li>
 
             </ul>
         </li>
@@ -67,7 +72,7 @@ import {RouterLink} from 'vue-router'
     padding: 5px;
     background-color: rgb(245, 245, 245);
     color: rgb(163, 198, 226);
-    .practice{
+    .down{
         width: 100px;
         //border: 2px solid black;
         color: rgb(92, 151, 199);

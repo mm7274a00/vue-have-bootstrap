@@ -1,6 +1,14 @@
 <script>
 //https://www.figma.com/file/ccDhQkKwkeNk12mqmS26Us/%E5%89%8D%E7%AB%AF%E7%B7%B4%E7%BF%922---dessert-shop?type=design&node-id=0-1&mode=design&t=zbjH5FhPByoQFbRI-0
 
+export default{
+    data(){
+        return{
+            imgArr:[
+                ""
+            ]
+        }
+    }}
 </script>
 
 <template>
@@ -8,7 +16,7 @@
 
         <div class="top Area">
             <div class="topbox"></div>
-            <img src="../assets/stylesheet/甜點圖片/Group 10.png" alt="" class="group">
+            <img src="../../public/甜點圖片/Group 10.png" alt="" class="group">
         </div>
 
         <div class="second Area">
@@ -16,24 +24,24 @@
                 <h1>Title</h1>
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem beatae autem harum illum vero ut fugiat molestiae eius eos! Eius.</h4>
             </div>
-            <img src="../assets/stylesheet/甜點圖片/1.png" alt="" width="379px" height="300px">
+            <img src="../../public/甜點圖片/1.png" alt="" width="379px" height="300px">
         </div>
         
         <h2 class="onsale Area">On Sale</h2>
 
         <div class="third Area">
             <div class="setBox" >
-                <img src="../assets/stylesheet/甜點圖片/3.png" alt="" srcset="" width="196px" height="242px">
+                <img src="../../public/甜點圖片/3.png" alt="" srcset="" width="196px" height="242px">
                 <div class="setText" >Item</div>
             </div>
-            <div class="setBox" >
+            <!--<div class="setBox" >
                 <img src="../assets/stylesheet/甜點圖片/2.png" alt="" srcset="" width="196px" height="242px">
                 <div class="setText" >Item</div>
             </div>
             <div class="setBox" >
                 <img src="../assets/stylesheet/甜點圖片/4.png" alt="" srcset="" width="196px" height="242px">
                 <div class="setText" >Item</div>
-            </div>
+            </div>-->
         </div>
 
         <div class="line Area">
@@ -42,14 +50,14 @@
         <h2 class="news Area">News</h2>
 
         <div class="four Area">
-            <div class="card">
-                <img src="../assets/stylesheet/甜點圖片/5.png" class="card-img-top" alt="...">
+            <div class="card" style="width: 15rem;" v-for="item in imgArr">
+                <img src="item" class="card-img-top" alt="...">
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn-primary">Details</a>
     </div>
             </div>
-            <div class="card">
+            <!--<div class="card">
                 <img src="../assets/stylesheet/甜點圖片/6.png" class="card-img-top" alt="...">
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -62,11 +70,11 @@
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn-primary">Details</a>
     </div>
-            </div>
+            </div>-->
         </div>
         <button type="button" class="more Area">More</button>
         <div class="five Area">
-            <img class="img8" src="../assets/stylesheet/甜點圖片/8.png" alt="" srcset="" width="405px" height="267px">
+            <img class="img8" src="../../public/甜點圖片/8.png" alt="" srcset="" width="405px" height="267px">
             <div class="rightText">
                 <h2>New Arrival</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione temporibus hic nisi, voluptatem blanditiis est aspernatur alias quaerat libero iste sunt adipisci culpa. Nam voluptate quia saepe.</p>

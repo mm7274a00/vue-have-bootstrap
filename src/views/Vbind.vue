@@ -41,7 +41,7 @@ export default {
     <label for="">Red</label>
     <input type="checkbox" value="red" v-model="styleArr">
     <label for="">Large</label>
-    <input type="checkbox" value="large" v-model="styleArr">
+    <input type="checkbox" value="large" v-model="styleArr" disabled>
     <label for="">bold</label>
     <input type="checkbox" value="bold" v-model="styleArr">
 

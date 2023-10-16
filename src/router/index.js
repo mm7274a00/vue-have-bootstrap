@@ -18,10 +18,25 @@ const router = createRouter({
       component: () => import('../views/Vfor.vue')
     },
     {
+      path: '/Von',
+      name: 'Von',
+      component: () => import('../views/Von.vue')
+    },
+    {
+      path: '/VtextAndVModel',
+      name: 'VtextAndVModel',
+      component: () => import('../views/VtextAndVModel.vue')
+    },
+    {
+    path: '/Vbind',
+    name: 'Vbind',
+    component: () => import('../views/Vbind.vue')
+    },
+    {
       path: '/Green1',
       name: 'Green1',
       component: () => import('../views/Green1.vue')
-    },
+      },
     {
     path: '/Green2',
     name: 'Green2',

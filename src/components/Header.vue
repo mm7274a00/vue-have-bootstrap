@@ -16,10 +16,13 @@ import {RouterLink} from 'vue-router'
         </li>
         <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="/VueUse" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Vue使用
+            Vue語法
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="down vfor" href="/Vfor">Vfor</a></li>
+            <li><a class="down vfor" href="/Vfor">V for</a></li>
+            <li><a class="down von" href="/Von">V on</a></li>
+            <li><a class="down vTextAndVModel" href="/VtextAndVModel">VtextAndVModel</a></li>
+            <li><a class="down vbind" href="/Vbind">V bind</a></li>
             </ul>
         </li>
         <li class="nav-item dropdown">
@@ -39,32 +42,34 @@ import {RouterLink} from 'vue-router'
     </div>
 </nav>
 
-    <!--<div class="headerShow">
+<!--<div class="headerShow">
     <RouterLink to="/" class="home link">Home</RouterLink>
     <RouterLink to="/Vtext" class="Vtext link">Vtext</RouterLink>
     <RouterLink to="/GuessNumber" class="GuessNumber link">GuessNumber</RouterLink>
     <RouterLink to="/Sweet" class="Sweet link">Sweet</RouterLink>
+    <RouterLink to="/Vbind" class="Vbind link">Vbind</RouterLink>
 </div>-->
 
 </template>
 
 <style lang="scss" scoped>
 .headerShow{
+    margin: -50px;
     margin-top: -10px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 150%;
     height: 70px;
     background-color: rgb(163, 198, 226);
     display: flex;
     .link{
         //border: 2px solid black;
         margin: auto 20px;
-        font-size: 22pt;
+        font-size: 20pt;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-decoration:none ;
         color: white;
         &:hover{
-            background-color: white;
-            color: rgb(163, 198, 226);
+            color: rgb(13, 91, 154);
         }
     }
 }
@@ -82,5 +87,8 @@ import {RouterLink} from 'vue-router'
             color: white;
     }
 }
+}
+.navbar{
+    height: 100px;
 }
 </style>

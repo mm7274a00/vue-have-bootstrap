@@ -4,9 +4,17 @@
 export default{
     data(){
         return{
-            imgArr:[
-                ""
-            ]
+            imgArr1:[
+            "../../public/甜點圖片/2.png",
+            "../../public/甜點圖片/3.png",
+            "../../public/甜點圖片/4.png",
+            ],
+            imgArr2:[
+                "../../public/甜點圖片/5.png",
+                "../../public/甜點圖片/6.png",
+                "../../public/甜點圖片/7.png",
+            ],
+            
         }
     }}
 </script>
@@ -30,8 +38,8 @@ export default{
         <h2 class="onsale Area">On Sale</h2>
 
         <div class="third Area">
-            <div class="setBox" >
-                <img src="../../public/甜點圖片/3.png" alt="" srcset="" width="196px" height="242px">
+            <div class="set" style="width: 18rem; height: 18rem;" v-for="item in imgArr1">
+                <img :src="item" class="card-img-top" alt="...">
                 <div class="setText" >Item</div>
             </div>
             <!--<div class="setBox" >
@@ -50,8 +58,8 @@ export default{
         <h2 class="news Area">News</h2>
 
         <div class="four Area">
-            <div class="card" style="width: 15rem;" v-for="item in imgArr">
-                <img src="item" class="card-img-top" alt="...">
+            <div class="card" style="width: 18rem; height: 18rem;" v-for="item in imgArr2">
+                <img :src="item" class="card-img-top" alt="...">
                 <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn-primary">Details</a>
@@ -72,7 +80,9 @@ export default{
     </div>
             </div>-->
         </div>
+
         <button type="button" class="more Area">More</button>
+
         <div class="five Area">
             <img class="img8" src="../../public/甜點圖片/8.png" alt="" srcset="" width="405px" height="267px">
             <div class="rightText">
@@ -80,6 +90,7 @@ export default{
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione temporibus hic nisi, voluptatem blanditiis est aspernatur alias quaerat libero iste sunt adipisci culpa. Nam voluptate quia saepe.</p>
             </div>
         </div>
+
         <div class="bgPage"></div>
         <div class="bottom"></div>
     </div>
@@ -123,12 +134,14 @@ export default{
     }
 }
 .third{
-    justify-content: space-between;
     margin-top: 36px;
     height:242px;
     }
+    .set{
+        margin: 10px;
+    }
     .setText{
-        margin:25px;
+        margin:28px;
         margin-top: -60px;
         position: absolute;
         width: 140px;
@@ -148,7 +161,7 @@ export default{
     justify-content: space-between;
     height: 264px;
     .card{
-        width: 196px;
+        margin: 10px;
         p{
             font-size: 10pt;
         }

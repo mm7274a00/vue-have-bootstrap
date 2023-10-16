@@ -3,12 +3,16 @@ export default {
         data(){
             return{
                 FallArr:[
-                "../../public/甜點圖片/2.png",
-                "../../public/甜點圖片/3.png",
                 "../../public/甜點圖片/5.png",
                 "../../public/甜點圖片/6.png",
                 "../../public/甜點圖片/7.png",
                 "../../public/甜點圖片/4.png",
+                "../../public/甜點圖片/3.png",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bMuSG0edizK6McWO1_TtmoWmiFHzXnS8tg&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEpUlSkgs7pb6iWNg2Q4bmITIPOzj9uBa23QU6UecMPoBIN3fvWIgxThzkcX3sggSBT78&usqp=CAU",
+                "https://officialchailease.blob.core.windows.net/public/zingala/2023/07/26/bcdee8ca-ffe9-4920-b632-1f5cc49528e5/b82f3f42-48d8-44bf-8e74-bb79105625b5.jpg",
+                "https://www.arfarf.tw/wp-content/uploads/10%E4%BB%B6%E4%BA%8B-1024x677.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7qgVmfGSAWrXDrroc3ddr0CatDtkU2F0HT_IqNTuxMQrT283UjYBRZ_Ttac9-S_FUcIU&usqp=CAU"
                 ],
             
             }
@@ -51,7 +55,7 @@ export default {
         </div>
     <div class="fallArea">
     <div class="fallImg" v-for="item in FallArr">
-    <img :src="item" alt=""></div>
+    <img :src="item" alt="" style="width: 18rem ;height: auto ;border-radius: 15px;"></div>
     </div>
 </template>
 
@@ -85,16 +89,15 @@ export default {
     
 }
 .fallArea{
-    display: flex;
-    flex-wrap: wrap;
-    column-count: 3 ;
-    column-gap: 20px 20px;
-    break-inside: auto;
-    height: 150vh;
-    width: 90vw;
-    background-color: bisque;
+    column-count: 4;
+    width: auto;
+    //background-color: bisque;
     .fallImg{
-    margin: 10px 10px
+    margin-bottom: 30px;
+    display: flex;
+    vertical-align: top;
+    justify-content: center;
+    //border: 5px solid rgb(224, 125, 125);
 }
 }
 

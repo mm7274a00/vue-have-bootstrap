@@ -15,7 +15,7 @@ import {RouterLink} from 'vue-router'
             <a class="nav link active" aria-current="page" href="/Vtext">課程內容</a>
         </li>
         <li class="nav-item dropdown">
-            <a class="practice link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="practice link dropdown-toggle" href="/VueUse" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Vue使用
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -23,7 +23,7 @@ import {RouterLink} from 'vue-router'
             </ul>
         </li>
         <li class="nav-item dropdown">
-            <a class="practice link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="practice link dropdown-toggle" href="" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             練習
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

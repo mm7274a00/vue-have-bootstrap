@@ -34,8 +34,10 @@ import {RouterLink} from 'vue-router'
             <li><a class="down practice green1" href="/Green1">前端練習1</a></li>
             <li><a class="down practice green1" href="/Green2">前端練習1(2)</a></li>
             <li><a class="down practice guessNumber link2" href="/GuessNumber">猜數字</a></li>
+            <li><a class="down practice ExpenseTracker link2" href="/ExpenseTracker">記帳程式</a></li>
             <li><a class="down practice sweet" href="/Sweet">甜點</a></li>
             <li><a class="down fall" href="/Fall">瀑布流</a></li>
+            <li><a class="down house" href="/House">房地產</a></li>
 
             </ul>
         </li>

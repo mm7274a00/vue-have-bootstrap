@@ -29,7 +29,7 @@
 <p>v-show 是條件成立時，再""並渲染標籤</p>
 <label for="">小名有車</label>
 <input type="checkbox" value="true" v-model="car2">
-<p v-if = "car2">確實有車</p>
+<p v-show="car2">確實有車</p>
 
 <br><p>   </p>
 

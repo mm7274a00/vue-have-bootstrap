@@ -89,7 +89,7 @@ export default {
     border: 0px solid black;
     width: 1050px;
     border-radius: 10px;
-    background-color: rgb(176, 176, 176);
+    background-color: rgb(225, 225, 225);
     
 }
 .fallArea{

@@ -20,6 +20,7 @@ export default {
             trimText:"",
             checkText:[],
             radioText:[],
+            imgbox:"",
         }
     },
     components: {
@@ -50,6 +51,18 @@ export default {
         <option value="2">2</option>
     </select>
     <p>{{ this.selectText }}</p>
+
+    <!--。宣告imgbox[]陣列配合radio實現單選checkbox 切換圖片-->
+    <div class="radioBox">
+    <label for="">狗</label>
+    <input type="radio" value="https://images.chinatimes.com/newsphoto/2020-07-04/656/20200704002959.jpg" v-model="imgbox">
+    <label for="">貓</label>
+    <input type="radio" value="https://imgs.gvm.com.tw/upload/gallery/20221204/125075.jpg" v-model="imgbox">
+    <label for="">狐狸</label>
+    <input type="radio" value="https://img.natgeomedia.com/userfiles/sm/sm1920_images_A1/5526/72310989252.jpg" v-model="imgbox">
+
+    <img :src="imgbox" alt="" style="width: 18rem;">
+    </div>
 
     <!-- lazy,number,trim -->
     <p>V-model.lazy</p>
@@ -84,4 +97,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.radioBox{
+    margin: 50px 0;
+}
 </style>

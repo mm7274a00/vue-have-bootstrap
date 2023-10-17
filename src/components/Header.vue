@@ -21,7 +21,7 @@ import {RouterLink} from 'vue-router'
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="down vfor" href="/Vfor">V for</a></li>
             <li><a class="down von" href="/Von">V on</a></li>
-            <li><a class="down vTextAndVModel" href="/VtextAndVModel">VtextAndVModel</a></li>
+            <li><a class="down vTextAndVModel" href="/VtextAndVModel">V text & V Model</a></li>
             <li><a class="down vbind" href="/Vbind">V bind</a></li>
             </ul>
         </li>

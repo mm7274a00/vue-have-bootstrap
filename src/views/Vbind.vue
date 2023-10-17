@@ -47,7 +47,9 @@ export default {
 
     <h2 :class="styleArr">在那裡</h2>
 
-    <img :src="imgText" alt="">
+    <img :src="imgText" alt="" style="width: 18rem;">
+
+
 </template>
 
 <style lang="scss" scoped>
@@ -66,4 +68,5 @@ p{
 .bold{
     font-weight: 100;
 }
+
 </style>

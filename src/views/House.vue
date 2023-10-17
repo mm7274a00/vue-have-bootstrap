@@ -19,10 +19,11 @@
         </div>
 
         <div class="login box">
-            <input type="button" value="ログイン">
+            <!--<input type="button" value="ログイン">-->
+            <RouterLink to="/" class="log Btn">ログイン</RouterLink>
             <label for="">｜</label>
-            <input type="button" value="お問い合わせ">
-        </div>
+            <input type="button" value="お問い合わせ" class="quz Btn">
+    </div>
     </div>
 
     <div class="middle page">
@@ -136,11 +137,14 @@ $maincolor:#475467;
         align-items: center;
         background-color: $maincolor;
         color: white;
-        input{
+        .Btn{
+            width: 120%;
             margin: 0 10px;
             color: white;
             background-color: $maincolor;
             font-weight: bold;
+            text-align: center;
+            text-decoration:none ;
             border: 0;
     }
 }

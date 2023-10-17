@@ -71,8 +71,7 @@ const router = createRouter({
       path: '/House',
       name: 'House',
       component: () => import('../views/House.vue')
-    }
-  ]
+    },]
 })
 
 export default router

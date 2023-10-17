@@ -1,5 +1,4 @@
 <script>
-
 </script>
 
 <template>
@@ -35,13 +34,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="../../public/房地產圖片/banner1.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="../../public/房地產圖片/banner2.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="../../public/房地產圖片/banner3.png" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -152,14 +151,15 @@ $maincolor:#475467;
 }
 
 .footer{
+    margin-top: -8px;
     height: 373px;
     background-color: #BEC0CD;
 
     .under{
-        width: 100%;
+        width: 1440px;
         margin-top: 58px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         
     }
     input{
@@ -168,6 +168,7 @@ $maincolor:#475467;
         font-size: 16pt;
         border: 0;
         border-radius: 15px;
+        margin: 42px;
         background-color: $maincolor;
         color: white;
     }

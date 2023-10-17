@@ -1,4 +1,14 @@
 <script>
+import {RouterLink,RouterView} from 'vue-router'
+export default {
+    data(){
+
+    },
+    components:{
+        RouterLink,
+        RouterView
+    },
+}
 </script>
 
 <template>
@@ -20,7 +30,7 @@
 
         <div class="login box">
             <!--<input type="button" value="ログイン">-->
-            <RouterLink to="/" class="log Btn">ログイン</RouterLink>
+            <RouterLink to="/Login" class="log Btn">ログイン</RouterLink><RouterView />
             <label for="">｜</label>
             <input type="button" value="お問い合わせ" class="quz Btn">
     </div>

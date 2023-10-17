@@ -41,6 +41,8 @@ import {RouterLink} from 'vue-router'
 
             </ul>
         </li>
+        <li class="nav-item">
+            <a class="nav link active" aria-current="page" href="/HouseHeader">househeader</a></li>
         </ul>
     </div>
     </div>

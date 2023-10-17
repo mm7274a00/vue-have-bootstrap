@@ -1,15 +1,4 @@
 <script>
-import { RouterLink, RouterView } from 'vue-router'
-export default {
-    data(){
-        return {
-        }
-    },
-    components:{
-        RouterLink,
-        RouterView
-    },
-}
 </script>
 
 <template>
@@ -30,10 +19,9 @@ export default {
         </div>
 
         <div class="login box">
-            <!--<input type="button" value="ログイン">-->
-            <RouterLink to="/House/HouseLogin" class="log Btn">ログイン</RouterLink>
+            <input type="button" value="ログイン">
             <label for="">｜</label>
-            <input type="button" value="お問い合わせ" class="quz Btn">
+            <input type="button" value="お問い合わせ">
         </div>
     </div>
 
@@ -148,14 +136,11 @@ $maincolor:#475467;
         align-items: center;
         background-color: $maincolor;
         color: white;
-        .Btn{
-            width: 120%;
+        input{
             margin: 0 10px;
             color: white;
             background-color: $maincolor;
             font-weight: bold;
-            text-align: center;
-            text-decoration:none ;
             border: 0;
     }
 }

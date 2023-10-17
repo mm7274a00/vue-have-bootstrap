@@ -70,15 +70,8 @@ const router = createRouter({
     {
       path: '/House',
       name: 'House',
-      component: () => import('../views/House.vue'),
-      children:[
-        {
-          path: "HouseLogin",
-          component:() => import('../views/HouseLogin.vue')
-        }
-      ]
-    },
-  ]
+      component: () => import('../views/House.vue')
+    },]
 })
 
 export default router

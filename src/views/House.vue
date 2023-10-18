@@ -1,19 +1,24 @@
 <script>
 import {RouterLink,RouterView} from 'vue-router'
+import HouseHeader from '../components/HouseHeader.vue';
 export default {
     data(){
-
+        return{}
     },
     components:{
+        HouseHeader,
         RouterLink,
-        RouterView
+        RouterView,
     },
 }
 </script>
 
 <template>
 <div class="houseFull">
-    <div class="header page">
+    <div class="top Area">
+        <HouseHeader />
+    </div>
+    <!--<div class="header page">
         <div class="color box"></div>
 
         <div class="com box">
@@ -29,14 +34,14 @@ export default {
         </div>
 
         <div class="login box">
-            <!--<input type="button" value="ログイン">-->
+            <input type="button" value="ログイン">
             <RouterLink to="/Login" class="log Btn">ログイン</RouterLink><RouterView />
             <label for="">｜</label>
             <input type="button" value="お問い合わせ" class="quz Btn">
-    </div>
-    </div>
+    </div>-->
 
     <div class="middle page">
+        <RouterView />
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

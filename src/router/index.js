@@ -80,7 +80,7 @@ const router = createRouter({
     {
       path: '/HouseHeader',
       name: 'HouseHeader',
-      component: () => import('../components/HouseHeader.vue')
+      component: () => import("../components/HouseHeader.vue")
     }
   ]
 })

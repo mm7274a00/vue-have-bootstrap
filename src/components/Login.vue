@@ -2,7 +2,7 @@
 
 <script>
 import {RouterLink,RouterView } from 'vue-router';
-import HouseHeader from '../components/HouseHeader.vue';
+import HwHeader from '../components/HwHeader.vue';
 export default {
     data(){
         return{
@@ -11,7 +11,7 @@ export default {
     methods:{
         },
         components:{
-            HouseHeader,
+            HwHeader,
             RouterView
         }
 }
@@ -22,9 +22,14 @@ export default {
     <div class="top Area">
         <HouseHeader />
     </div>
+    <div class="box"></div>
 </template>
 
 <style lang="scss" scoped>
-
+.box{
+    width: 500px;
+    height: 100px;
+    background-color: aquamarine;
+}
 
 </style>

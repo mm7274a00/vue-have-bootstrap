@@ -30,7 +30,7 @@ export default{
 
         <div class="login box">
             <!--<input type="button" value="ログイン">-->
-            <RouterLink to="/Login" class="log Btn">ログイン</RouterLink>
+            <RouterLink to="/HW/Login" class="log Btn">ログイン</RouterLink>
             <label for="">｜</label>
             <input type="button" value="お問い合わせ" class="quz Btn">
     </div>
@@ -41,10 +41,13 @@ export default{
 $maincolor:#475467;
 .header{
     background-color: white;
+    width: 1440px;
     height: 168px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
+    border: 2px solid black;
 
     
 .box{

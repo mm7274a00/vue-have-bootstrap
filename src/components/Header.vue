@@ -37,12 +37,12 @@ import {RouterLink} from 'vue-router'
             <li><a class="down practice ExpenseTracker link2" href="/ExpenseTracker">記帳程式</a></li>
             <li><a class="down practice sweet" href="/Sweet">甜點</a></li>
             <li><a class="down fall" href="/Fall">瀑布流</a></li>
-            <li><a class="down house" href="/House">房地產</a></li>
+            <li><a class="down house" href="/HWHome">房地產</a></li>
 
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav link active" aria-current="page" href="/HouseHeader">househeader</a></li>
+            <a class="nav link active" aria-current="page" href="/HW/HwHome">房地產</a></li>
         </ul>
     </div>
     </div>

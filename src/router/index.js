@@ -68,20 +68,20 @@ const router = createRouter({
       component: () => import('../views/Fall.vue')
     },
     {
-      path: '/House',
-      name: 'House',
-      component: () => import('../views/House.vue')
+      path: '/HW',
+      name: 'HW',
+      component: () => import('../views/HW.vue'),
+      children: [
+        {
+          path: 'Login',
+          component: () => import('../components/Login.vue')
+        },
+        {
+          path: 'HwHome',
+          component: () => import("../views/HwHome.vue")
+        }
+      ]
     },
-    {
-      path: '/Login',
-      name: 'Login',
-      component: () => import('../components/Login.vue')
-    },
-    {
-      path: '/HouseHeader',
-      name: 'HouseHeader',
-      component: () => import("../components/HouseHeader.vue")
-    }
   ]
 })
 

@@ -15,7 +15,7 @@ import Header from "./components/Header.vue"
 <style lang="scss" scoped>
 .fullpage{
   padding: 0 50px;
-  padding-bottom: 20px;
-  border: 5px solid rgb(163, 198, 226);;
+  padding-bottom: 5%;
+  border: 5px solid rgb(163, 198, 226);
 }
 </style>

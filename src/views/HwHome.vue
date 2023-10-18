@@ -1,23 +1,13 @@
 <script>
-import {RouterLink,RouterView} from 'vue-router'
-import HouseHeader from '../components/HouseHeader.vue';
 export default {
     data(){
         return{}
-    },
-    components:{
-        HouseHeader,
-        RouterLink,
-        RouterView,
     },
 }
 </script>
 
 <template>
 <div class="houseFull">
-    <div class="top Area">
-        <HouseHeader />
-    </div>
     <!--<div class="header page">
         <div class="color box"></div>
 
@@ -39,9 +29,7 @@ export default {
             <label for="">｜</label>
             <input type="button" value="お問い合わせ" class="quz Btn">
     </div>-->
-
     <div class="middle page">
-        <RouterView />
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -87,8 +75,7 @@ export default {
 $maincolor:#475467;
 .houseFull{
     width: 1440px;
-    height: 1022px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 5px solid $maincolor;
 
 }

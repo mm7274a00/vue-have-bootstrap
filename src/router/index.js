@@ -82,6 +82,16 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: '/VueRouter',
+      name: 'VueRouter',
+      component: () => import('../views/VueRouter.vue')
+    },
+    {
+      path: '/Props',
+      name: 'Props',
+      component: () => import('../components/Props.vue')
+    },
   ]
 })
 

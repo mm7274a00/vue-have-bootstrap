@@ -85,12 +85,33 @@ const router = createRouter({
     {
       path: '/VueRouter',
       name: 'VueRouter',
-      component: () => import('../views/VueRouter.vue')
+      component: () => import('../views/VueRouter.vue'),
+      children: [
+        {
+          path: 'ComA',
+          component: () => import('../components/RouterComA.vue')
+        },
+        {
+          path: 'ComB',
+          component: () => import('../components/RouterComA.vue')
+        },
+      ]
     },
     {
       path: '/Props',
       name: 'Props',
       component: () => import('../components/Props.vue')
+    },
+    {
+      path: '/Emit',
+      name: 'Emit',
+      component: () => import('../views/Emit.vue'),
+      children: [
+        {
+          path: 'child2',
+          component: () => import('../components/child2.vue')
+        }
+      ]
     },
   ]
 })

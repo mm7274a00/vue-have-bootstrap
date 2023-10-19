@@ -49,7 +49,7 @@ import {RouterLink} from 'vue-router'
             <li class="nav-item">
             <a class="nav link active" aria-current="page" href="/Props">Props</a>
             </li>
-
+            <RouterLink to="/Emit" class="Emit link">Emit</RouterLink>
             </ul>
     </div>
     </div>

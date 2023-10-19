@@ -76,8 +76,6 @@ $maincolor:#475467;
 .houseFull{
     width: 1440px;
     background-color: rgb(255, 255, 255);
-    border: 5px solid $maincolor;
-
 }
 
 .page{

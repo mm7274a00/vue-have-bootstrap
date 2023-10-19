@@ -79,6 +79,10 @@ const router = createRouter({
         {
           path: 'HwHome',
           component: () => import("../views/HwHome.vue")
+        },
+        {
+          path: 'HwQuz',
+          component: () => import('../components/HwQuz.vue')
         }
       ]
     },

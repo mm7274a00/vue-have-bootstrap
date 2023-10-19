@@ -14,7 +14,7 @@ export default{
 
 <template>
     <div class="header page">
-        <div class="color box"></div>
+        <RouterLink to="/HW/HwHome" class="homepage box"></RouterLink>
 
         <div class="com box">
             <input type="button" value="会社案内" class="button">
@@ -32,7 +32,8 @@ export default{
             <!--<input type="button" value="ログイン">-->
             <RouterLink to="/HW/Login" class="log Btn">ログイン</RouterLink>
             <label for="">｜</label>
-            <input type="button" value="お問い合わせ" class="quz Btn">
+            <RouterLink to="/HW/HwQuz" class="quz Btn">お問い合わせ</RouterLink>
+            <!--<input type="button" value="お問い合わせ" class="quz Btn">-->
     </div>
     </div>
 </template>
@@ -55,7 +56,7 @@ $maincolor:#475467;
     /*border: 2px solid blue;*/
     margin: 0 auto;
 }
-    .color{
+    .homepage{
         width: 98px;
         height: 98px;
         background-color: $maincolor;
@@ -95,17 +96,16 @@ $maincolor:#475467;
         height: 48px;
         display: flex;
         align-items: center;
+        justify-content: center;
         background-color: $maincolor;
         color: white;
         .Btn{
-            width: 120%;
             margin: 0 10px;
             color: white;
             background-color: $maincolor;
             font-weight: bold;
             text-align: center;
             text-decoration:none ;
-            border: 0;
     }
 }
 }

@@ -60,7 +60,12 @@ const router = createRouter({
     {
       path: '/ETHome',
       name: 'ETHome',
-      component: () => import('../views/ExpenseTracker/ETHome.vue')
+      component: () => import('../views/ExpenseTracker/ETHome.vue'),
+    },
+    {
+      path: '/ETSignUp',
+      name: 'ETSignUp',
+      component: () => import('../views/ExpenseTracker/ETSignUp.vue')
     },
     {
       path: '/Sweet',

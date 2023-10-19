@@ -1,15 +1,4 @@
 <script>
-import {RouterLink} from 'vue-router'
-export default{
-    data(){
-        return{
-
-        }
-    },
-    components :{
-        RouterLink,
-    }
-}
 </script>
 
 <template>
@@ -29,7 +18,7 @@ export default{
 </form>
 
     <div class="bttnArea page"> 
-        <RouterLink to="/ETHome/SignUp" class="signup Btn">Sign Up</RouterLink>
+        <RouterLink to="/ETSignUp" class="signup Btn">Sign Up</RouterLink>
         <button type="button" class="login Btn"><label for="" id="bttn">Log in</label></button>
     </div>
 </div>

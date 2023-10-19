@@ -82,6 +82,10 @@ $maincolor:#475467;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        p{  
+            margin: auto;
+            margin-left: -20px;
+        }
 
 
     }

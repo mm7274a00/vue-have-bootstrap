@@ -80,7 +80,6 @@ export default {
     }
     }
 
-
     .bttnArea{ 
         .Btn{
             margin: auto;
@@ -98,7 +97,7 @@ export default {
                 color: #ffffff;
                 background-color: #A1B9C7;
                 transition: 0.1s;
-        }
+            }
             }
     }
 }

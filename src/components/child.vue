@@ -1,14 +1,20 @@
 <script>
 export default {
-props:[
-    "person"
-]
+    props:[
+    //"person",
+    //"sign",
+    "signInfo"
+    ]
 }
 </script>
 
 <template>
     <div class="textShow">
-        {{ this.person }}
+        <!--{{ this.person }}-->
+        {{ this.name }}
+        <label for="">姓名</label>
+        <!--<input type="text" v-model="sign.name">-->
+        <!--emit-->
     </div>
 </template>
 

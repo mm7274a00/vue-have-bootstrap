@@ -1,5 +1,6 @@
 <script>
 import child from "../components/child.vue";
+import child2 from "../components/child2.vue";
 export default {
     data(){
         return{
@@ -21,8 +22,15 @@ export default {
             }
         }
     },
+    methods:{
+        changePage(){
+        console.log(this.sighInfo);
+        this.page = 2;
+        }
+    },
     components: {
-        child
+        child,
+        child2
     }
 }
 </script>
@@ -31,7 +39,8 @@ export default {
     <div v-if="page == 1" class="show">
         <!--填寫註冊帳戶資訊的版面-->
         <!--註冊帳戶的版面-->
-        <label for="">姓名</label>
+        <child />
+        <!--<label for="">姓名</label>
         <input type="text" v-model="signInfo.name">
         <label for="">電話</label>
         <input type="text" v-model="signInfo.phone">
@@ -51,17 +60,18 @@ export default {
         </div>
 
         <label for="">興趣</label>
-        <input type="text" v-model="signInfo.favorite">
+        <input type="text" v-model="signInfo.favorite">-->
 
         <button type="button" @click="changePage()">Next</button>
+
     </div>
 
     <div v-if="page == 2" class="show2">
     <!--在 child 中設計確認帳戶資訊的版面-->
     <!--    {{ this.personal }}-->
     {{ this.signInfo }}
-    <child :person="prersonal" sign="signInfo"></child>
-    </div>  
+    <child :person="personal" :sign="signInfo" />
+    </div>
 </template>
 
 <style lang="scss" scoped>

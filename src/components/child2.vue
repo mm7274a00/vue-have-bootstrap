@@ -2,13 +2,13 @@
 export default {
     data(){
         return{
-            text:"apple",
+            text:"orange",
         }
     },
     methods: {
         emitGo(){
             //  我要往父元件傳遞訊息
-            //  告知父元件執行 apple(,左邊的值) 暗號給予紙條
+            //  步驟1：告知父元件執行 apple(,左邊的值) 暗號給予紙條
             this.$emit("apple",this.text)
         }
     }
@@ -19,7 +19,10 @@ export default {
 <div class="showArea">
     <h1>Emit child</h1>
     <p>text變數：{{this.text}}</p>
-    <button type="button" @click="emitGo">emitGO</button>
+
+    <!--步驟2：兩種都可使用-->
+    <!--<button type="button" @click="emitGo">emitGO</button>-->
+    <button type="button" @click="$emit('apple',this.text)">emitGo</button>
 </div>
 </template>
 

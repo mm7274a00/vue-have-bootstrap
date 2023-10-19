@@ -16,8 +16,8 @@ export default {
 <template>
 
 <p>【Vbind】</p>
-<p> v- model : 綁定標籤的值</p>
-<p> v-bind : 綁定標籤屬性</p>
+<p> 。 v- model : 綁定標籤的值</p>
+<p> 。 v-bind : 綁定標籤屬性</p>
 
     <h1 class="cool">COOL1</h1>
     <h2 v-bind:class="title">COOL2</h2>

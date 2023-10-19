@@ -44,6 +44,8 @@
 <p v-if = "house ==1">普通的房子</p>
 <p v-if = "house ==2">很大的房子</p>
 <p v-else>還好的房子</p>
+<p>※兩者差別為：使用v-if選擇值1時，"v-else"的文字還是會出現
+</p>
 
 <!--v-if & v-else & v-else-->
 <h3>v-if & v-else-if & v-else</h3>
@@ -57,8 +59,6 @@
 <p v-else-if = "house2 ==2">很大的房子</p>
 <p v-else>還好的房子</p>
 
-<p>兩者差別為：使用v-if選擇值1時，"v-else"的文字還是會出現
-</p>
 </template>
 
 <style lang="scss" scoped>

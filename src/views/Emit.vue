@@ -10,6 +10,7 @@ export default{
         child2
     },
     methods:{
+        //步驟4：複印值並顯示
         emitObj(params){
             console.log(params)
             this.childText = params
@@ -20,9 +21,10 @@ export default{
 
 <template>
     <h1>Emit</h1>
+    <p>。 可簡易理解為新年給紅包習俗：到了新年(定義方法)、新年快樂(暗號)、紅包(紙條/值)、console.log複印其值</p>
     {{ this.childText }}
 <div class="show">
-    <!--告知子元件，想要父元件做什麼事就傳遞 apple-->
+    <!--步驟3：告知子元件，想要父元件做什麼事就傳遞 apple-->
     <child2 @apple="emitObj"/>
 
 </div>

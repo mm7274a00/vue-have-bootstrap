@@ -117,6 +117,11 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: '/DataFlow',
+      name: 'DataFlow',
+      component: () => import('../views/DataFlow.vue')
+    },
   ]
 })
 

@@ -11,9 +11,6 @@ import {RouterLink} from 'vue-router'
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav link active" aria-current="page" href="/Vtext">課程內容</a>
-        </li>
         <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="/VueUse" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Vue語法
@@ -50,6 +47,8 @@ import {RouterLink} from 'vue-router'
             <a class="nav link active" aria-current="page" href="/Props">Props</a>
             </li>
             <RouterLink to="/Emit" class="Emit link">Emit</RouterLink>
+            <RouterLink to="/DataFlow" class="DataFlow link">DataFlow</RouterLink>
+            <RouterLink to="/ExpenseTracker" class="ExpenseTracker link">記帳</RouterLink>
             </ul>
     </div>
     </div>

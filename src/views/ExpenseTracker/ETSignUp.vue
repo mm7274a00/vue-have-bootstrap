@@ -29,7 +29,8 @@ export default {
 </form>
 
     <div class="bttnArea page">
-        <button type="button" class="login Btn"><label for="" id="bttn">Cancel</label></button>
+        <!--<button type="button" class="login Btn"><label for="" id="bttn">Cancel</label></button>-->
+        <RouterLink to="/ETLogin" class="Cancel Btn">Cancel</RouterLink>
         <button type="button" class="login Btn"><label for="" id="bttn">Sign up</label></button>
     </div>
 </div>
@@ -82,18 +83,15 @@ export default {
 
     .bttnArea{ 
         .Btn{
+            margin: auto;
             margin-top: 72px;
             width: 153px;
             height: 39px;
             border: 0;
             border-radius: 10px;
-            }
-    }
-    .login{
-            width: 234px;
-            height: 52px;
             font-size: 16pt;
-            margin: auto;
+            text-align: center;
+            padding-top: 5px;
             background-color: #ffffff;
             color: #3C7FA5;
             &:active{
@@ -101,7 +99,8 @@ export default {
                 background-color: #A1B9C7;
                 transition: 0.1s;
         }
-        }
+            }
+    }
 }
 }
 

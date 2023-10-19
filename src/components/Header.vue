@@ -54,7 +54,7 @@ import {RouterLink} from 'vue-router'
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="down practice ET" href="/ExpenseTracker">記帳</a></li>
-            <li><a class="down practice ET" href="/ET">Login</a></li>
+            <li><a class="down practice ET" href="/ETLogin">Login</a></li>
             </ul>
             </li>
             </ul>

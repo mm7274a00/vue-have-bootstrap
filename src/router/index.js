@@ -68,9 +68,9 @@ const router = createRouter({
       ]
     },
     {
-      path: '/ETHome',
-      name: 'ETHome',
-      component: () => import('../views/ExpenseTracker/ETHome.vue'),
+      path: '/ETLogin',
+      name: 'ETLogin',
+      component: () => import('../views/ExpenseTracker/ETLogin.vue'),
     },
     {
       path: '/ETSignUp',

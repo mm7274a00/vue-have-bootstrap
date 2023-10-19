@@ -1,5 +1,6 @@
 <script>
 //https://www.figma.com/file/Pkn51cLShmznqIYYXt4c1g/%E5%89%8D%E7%AB%AF%E7%B7%B4%E7%BF%929---Expense-Tracker?type=design&node-id=0-1&mode=design&t=csKNN8PJiywovk2d-0
+import {RouterLink} from 'vue-router'
 export default {
     data() {
     return {
@@ -47,7 +48,8 @@ export default {
         </div> 
         </div>
         <div class="btn">
-        <button type="button" class="numBtn" v-on:click="cool">Add transaction</button>
+        <!--<button type="button" class="numBtn" v-on:click="cool">Add transaction</button>-->
+        <RouterLink to="/ExpenseTracker/ETAdd" class="ETAdd link">Add transaction</RouterLink>
         </div>
         <div class="content">
         <div class="block" v-for="item in arr">

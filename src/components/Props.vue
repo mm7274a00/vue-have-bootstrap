@@ -24,7 +24,7 @@ export default {
     },
     methods:{
         changePage(){
-        console.log(this.sighInfo);
+        console.log(this.signInfo);
         this.page = 2;
         }
     },

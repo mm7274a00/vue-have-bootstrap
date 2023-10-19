@@ -114,5 +114,6 @@ $maincolor:#BEC0CD(147, 184, 203);
                 transition: 0.2s;
         }
         }
-}}
+}
+}
 </style>

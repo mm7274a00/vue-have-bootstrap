@@ -58,6 +58,11 @@ const router = createRouter({
       component: () => import('../views/ExpenseTracker.vue')
     },
     {
+      path: '/ETHome',
+      name: 'ETHome',
+      component: () => import('../views/ExpenseTracker/ETHome.vue')
+    },
+    {
       path: '/Sweet',
       name: 'Sweet',
       component: () => import('../views/Sweet.vue')

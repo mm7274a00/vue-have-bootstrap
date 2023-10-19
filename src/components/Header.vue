@@ -48,7 +48,15 @@ import {RouterLink} from 'vue-router'
             </li>
             <RouterLink to="/Emit" class="Emit link">Emit</RouterLink>
             <RouterLink to="/DataFlow" class="DataFlow link">DataFlow</RouterLink>
-            <RouterLink to="/ExpenseTracker" class="ExpenseTracker link">記帳</RouterLink>
+            <li class="nav-item dropdown">
+            <a class="practice link dropdown-toggle" href="/ExpenseTracker" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            記帳
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="down practice ET" href="/ExpenseTracker">記帳</a></li>
+            <li><a class="down practice ET" href="/ETHome">Login</a></li>
+            </ul>
+            </li>
             </ul>
     </div>
     </div>

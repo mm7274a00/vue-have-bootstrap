@@ -2,8 +2,19 @@
 export default {
     data(){
         return{
+            signInfo:{
+                account:"",
+                password:"",
+                repeart:"",
+            },
         }
     },
+    methods:{
+        changePage(){
+            console.log(this.signInfo);
+            this.page = 1;
+        }
+    }
 }
 </script>
 

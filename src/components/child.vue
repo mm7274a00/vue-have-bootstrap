@@ -3,7 +3,8 @@ export default {
     props:[
     //"person",
     //"sign",
-    "signInfo"
+    "signInfo",
+    "name"
     ]
 }
 </script>

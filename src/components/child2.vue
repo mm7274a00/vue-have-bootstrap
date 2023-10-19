@@ -19,7 +19,6 @@ export default {
 <div class="showArea">
     <h1>Emit child</h1>
     <p>text變數：{{this.text}}</p>
-
     <!--步驟2：兩種都可使用-->
     <!--<button type="button" @click="emitGo">emitGO</button>-->
     <button type="button" @click="$emit('apple',this.text)">emitGo</button>
@@ -27,7 +26,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.Area{
+.showArea{
     background-color: aqua;
     width: 500px;
     height: 500px;

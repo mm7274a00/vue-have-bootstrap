@@ -55,7 +55,17 @@ const router = createRouter({
     {
       path: '/ExpenseTracker',
       name: 'ExpenseTracker',
-      component: () => import('../views/ExpenseTracker.vue')
+      component: () => import('../views/ExpenseTracker.vue'),
+      children: [
+        {
+          path: 'ETAdd',
+          component: () => import('../components/ETData/ETAdd.vue')
+        },
+        {
+          path: 'ETDel',
+          component: () => import('../components/ETData/ETDel.vue')
+        },
+      ]
     },
     {
       path: '/ETHome',

@@ -38,6 +38,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-
+.show{
+    height: 100%;
+}
 
 </style>

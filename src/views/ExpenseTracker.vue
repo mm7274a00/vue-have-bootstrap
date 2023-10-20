@@ -48,8 +48,7 @@ export default {
         </div> 
         </div>
         <div class="btn">
-        <!--<button type="button" class="numBtn" v-on:click="cool">Add transaction</button>-->
-        <RouterLink to="/ExpenseTracker/ETAdd" class="ETAdd link">Add transaction</RouterLink>
+        <button type="button" class="numBtn" v-on:click="cool">Add transaction</button>
         </div>
         <div class="content">
         <div class="block" v-for="item in arr">

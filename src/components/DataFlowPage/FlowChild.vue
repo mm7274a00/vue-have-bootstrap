@@ -18,6 +18,7 @@ export default{
 
 <template>
     <div class="show">
+        <p>Flowchild</p>
         <p>。第一次輸入需點擊buttom，資料才會顯示</p>
         <label for="">名字</label>
         <input type="text" v-model="info.name">

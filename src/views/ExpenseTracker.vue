@@ -1,30 +1,32 @@
 <script>
 //https://www.figma.com/file/Pkn51cLShmznqIYYXt4c1g/%E5%89%8D%E7%AB%AF%E7%B7%B4%E7%BF%929---Expense-Tracker?type=design&node-id=0-1&mode=design&t=csKNN8PJiywovk2d-0
-import {RouterLink} from 'vue-router'
 export default {
     data() {
-    return {
-        plusNum: 0,
-        neNum: 0,
-        totalNum: 0,
-        arr: []
-    }
+        return {
+            plusNum: 0,
+            neNum: 0,
+            totalNum: 0,
+            arr: [],
+            add: {
+                text:"",
+                amount:"",
+            }
+        }
     },
     methods: {
-    cool() {
-        let obj = {
-        name: "income",
-        money: 100
-        }
+        cool() {
+            let obj = {
+            name: "income",
+            money: 100
+            }
 
-        let obj2 = {
-        name: "expense",
-        money: -50
-        }
-        this.arr.push(obj)
-        this.arr.push(obj2)
-        
-    }
+            let obj2 = {
+            name: "expense",
+            money: -50
+            }
+            this.arr.push(obj)
+            this.arr.push(obj2)
+        },
     }
 }
 </script>
@@ -48,13 +50,41 @@ export default {
         </div> 
         </div>
         <div class="btn">
-        <button type="button" class="numBtn" v-on:click="cool">Add transaction</button>
+            <button type="button" class="AddBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add transaction
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form>
+            <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Text</label>
+            <input type="text" class="form-control" id="text">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" v-model="plusNum">
+            </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="numBtn" v-on:click="cool">Send message</button>
+        </div>
+    </div>
+    </div>
+</div>
+        <!--<button type="button" class="numBtn" v-on:click="cool" >Add transaction</button>-->
         </div>
         <div class="content">
         <div class="block" v-for="item in arr">
             <div class="items">
             <span>{{ item.name }}</span>
             <span>{{ item.money }}</span>
+            <p v-if = "money < 0 ">{{ item.money }}</p>
         </div>
             <button type="button" class="dltBtn">Delete</button>
         </div>
@@ -111,7 +141,7 @@ export default {
         color: #A53C42;
         }
     }
-    .numBtn{
+    .AddBtn{
         border-radius: 10px;
         margin-top: 91px;
         margin-bottom: 53px;

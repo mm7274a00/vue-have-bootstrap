@@ -12,7 +12,7 @@ export default{
     methods:{
         //步驟4：複印值並顯示
         emitObj(params){
-            console.log(params)
+            console.log(params)//顯示於F12主控台
             this.childText = params
         }
     }
@@ -21,7 +21,8 @@ export default{
 
 <template>
     <h1>Emit</h1>
-    <p>。 可簡易理解為新年給紅包習俗：到了新年(定義方法)、新年快樂(暗號)、紅包(紙條/值)、console.log複印其值</p>
+    <p>。 子傳父，宣告方法*emitGo*，建立button @click="emitGo"，按下按鈕則執行("get",this.變數)，並推送資料至info{}</p>
+    <p>。 可簡易理解為新年給紅包習俗：到了新年(定義方法)、新年快樂(暗號)、紅包(紙條/值)、console.log複印其值(非必要)</p>
     {{ this.childText }}
 <div class="show">
     <!--步驟3：告知子元件，想要父元件做什麼事就傳遞 apple-->

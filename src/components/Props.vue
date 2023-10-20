@@ -11,6 +11,7 @@ export default {
                 email:"XXXX@gmail.com"
             },
             page: 1,
+            //變數
             signInfo:{
                 name:"",
                 phone:"",
@@ -36,6 +37,10 @@ export default {
 </script>
 
 <template>
+    <h1>Props：</h1>
+    <p>。父傳子，為單一數據流，禁止使用v-model綁變數</p>
+    <p>。宣告props:["變數"]，顯示值"{ { this.變數} }"</p>
+
     <div v-if="page == 1" class="show">
         <!--填寫註冊帳戶資訊的版面-->
         <!--註冊帳戶的版面-->

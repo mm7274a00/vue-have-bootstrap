@@ -11,7 +11,7 @@ export default{
     },
     components:{
         flowChild,
-        flowChild2
+        flowChild2,
     },
     methods: {
         infoGet(info){
@@ -25,7 +25,7 @@ export default{
 </script>
 
 <template>
-    <p>創建 obj:{} 放置</p>
+    <h1>DataFlow</h1>
     <h1>{{ this.obj }}</h1>
     <div v-show = "page == false" class="show">
         <flowChild @get = "infoGet" />

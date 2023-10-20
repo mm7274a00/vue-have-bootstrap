@@ -9,7 +9,7 @@ export default{
         }
     },
     methods:{
-        emitGo(){
+        emitshow(){
             this.$emit("get",this.info);
         },
     },
@@ -19,10 +19,8 @@ export default{
 <template>
     <div class="show">
         <label for="">名字</label>
-        <input type="text" {{ this.name }}>
         <label for="">年齡</label>
-        <input type="number" {{ this.age }}>
-        <button type="button" @click="emitGo">顯示資料於{}</button>
+        <button type="button" @click="emitshow">顯示資料於{}</button>
     </div>
 
 </template>

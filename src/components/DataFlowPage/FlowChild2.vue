@@ -10,15 +10,19 @@ export default {
         "age",
     ],
     methods: {
-    
+        
     }
 }
 </script>
 
 <template>
 <div class="show">
+    <p>Flowchild2</p>
     <p>名字是：{{ this.name }}</p>
     <p>年齡是：{{ this.age }}</p>
+
+    <!--<input type="text" name="" id="" :value="age" @input="$emit(`update:age`,$event.target.value)">
+    <button type="button" @click="console.log($event)">資料</button>-->
 </div>
 </template>
 

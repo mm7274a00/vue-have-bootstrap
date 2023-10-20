@@ -18,6 +18,7 @@ export default{
 
 <template>
     <div class="show">
+        <p>。第一次輸入需點擊buttom，資料才會顯示</p>
         <label for="">名字</label>
         <input type="text" v-model="info.name">
         <label for="">年齡</label>
@@ -29,9 +30,15 @@ export default{
 
 <style lang="scss" scoped>
 .show{
-    width: 300px;
+    width: 500px;
     height: 200px;
     display: flex;
     flex-direction: column;
+    input{
+        width: 200px;
+    }
+    button{
+        width: 200px;
+    }
 }
 </style>

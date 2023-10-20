@@ -33,7 +33,7 @@ export default{
     </div>
     <div v-show = "page == true" class="show2">
         <flowChild2 :name="obj.name" :age= "obj.age" />
-        <button type="button" @click="pageChange">pageChange</button>
+        <button type="button" @click="pageChange">pageChange2</button>
     </div>
 </template>
 

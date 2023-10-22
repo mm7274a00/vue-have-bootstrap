@@ -7,7 +7,7 @@ export default {
 <template>
     <div class="show">
         <div class="box">
-        <h1>Hi! This is ETPutIn</h1>
+        <h1>Hi! This is ETadd</h1>
     </div>
 </div>
 </template>

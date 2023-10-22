@@ -1,5 +1,6 @@
 <script>
 //https://www.figma.com/file/Pkn51cLShmznqIYYXt4c1g/%E5%89%8D%E7%AB%AF%E7%B7%B4%E7%BF%929---Expense-Tracker?type=design&node-id=0-1&mode=design&t=csKNN8PJiywovk2d-0
+
 export default {
     data() {
         return {
@@ -9,29 +10,51 @@ export default {
             arr: [],
             add: {
                 text:"",
-                amount:"",
+                money:"",
             }
         }
     },
     methods: {
         cool() {
-            let obj = {
-            name: "income",
-            money: 100
-            }
+    let obj = {
+        name: "income",
+        money: 100
+    };
 
-            let obj2 = {
-            name: "expense",
-            money: -50
-            }
+    let obj2 = {
+        name: "expense",
+        money: -50
+    };
 
-            this.arr.push(obj)
-            this.arr.push(obj2)
-        },
-        addGo(){
-            this.$emit("get",this.add);
-        },
+    this.arr.push(obj);
+    this.arr.push(obj2);
+
+    this.totalNum = this.Total();
+    this.plusNum = this.Income();
+    this.neNum = this.Expense();
     },
+
+    addGo() {
+    this.arr.push({
+        name: this.add.text,
+        money: this.add.money,
+    });
+    this.totalNum = this.Total();
+    this.plusNum = this.Income();
+    this.neNum = this.Expense();
+    },
+    Total() {
+        return this.arr.reduce((total, item) => total + item.money, 0);
+            },
+        Income() {
+        return this.arr.filter(item => item.money > 0)
+        .reduce((total, item) => total + item.money, 0);
+            },
+        Expense() {
+        return this.arr.filter(item => item.money < 0)
+            .reduce((total, item) => total + item.money, 0);
+            },
+    }
 }
 </script>
 
@@ -75,19 +98,18 @@ export default {
         </form>
         </div>
         <div class="modal-footer">
-        <button type="button" class="numBtn" @click="addGo" get="" >Send message</button>
+        <button type="button" class="numBtn" @click="cool">Send message</button>
         </div>
     </div>
     </div>
 </div>
-        <!--<button type="button" class="numBtn" v-on:click="cool" >Add transaction</button>-->
         </div>
+        <!--原始<button type="button" class="AddBtn" v-on:click="cool" >Add transaction</button>-->
         <div class="content">
         <div class="block" v-for="item in arr">
             <div class="items">
             <span>{{ item.name }}</span>
             <span>{{ item.money }}</span>
-            <p v-if = "amount < 0 ">{{ item.amount }}</p>
         </div>
             <button type="button" class="dltBtn">Delete</button>
         </div>

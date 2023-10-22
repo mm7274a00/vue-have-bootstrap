@@ -3,16 +3,15 @@ export default {
     data(){
         return{
             signInfo:{
-                account:"",
-                password:"",
-                repeart:"",
+                SUAccount:"",
+                SUPasword:"",
+                SURe:"",
             },
         }
     },
     methods:{
-        changePage(){
+        signup(){
             console.log(this.signInfo);
-            this.page = 1;
         }
     }
 }
@@ -25,24 +24,24 @@ export default {
     <form action="#" id="form">
     <div class="infoInput page">
     <label for="">Account</label>
-    <input type="email" placeholder="******@gmail.com" id="email">
+    <input type="email" placeholder="******@gmail.com" id="SUAccount" v-model="signInfo.SUAccount">
     </div>
 
     <div class="infoInput page">
     <label for="">Password</label>
-    <input type="text" placeholder="Password" id="Password">
+    <input type="text" placeholder="Password" id="SUPasword" v-model="signInfo.SUPasword">
     </div>
 
     <div class="infoInput page">
-    <label for="">RepeatPassword</label>
-    <input type="text" placeholder="RepeatPassword" id="RepeatPassword">
+    <label for="">Password</label>
+    <input type="text" placeholder="Password" id="SURe" v-model="signInfo.SURe">
     </div>
 </form>
 
     <div class="bttnArea page">
         <!--<button type="button" class="login Btn"><label for="" id="bttn">Cancel</label></button>-->
         <RouterLink to="/ETLogin" class="Cancel Btn">Cancel</RouterLink>
-        <button type="button" class="login Btn"><label for="" id="bttn">Sign up</label></button>
+        <button type="button" class="login Btn" @click="signup"><label for="" id="bttn">Sign up</label></button>
     </div>
 </div>
 </div>

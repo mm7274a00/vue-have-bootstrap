@@ -24,10 +24,14 @@ export default {
             name: "expense",
             money: -50
             }
+
             this.arr.push(obj)
             this.arr.push(obj2)
         },
-    }
+        addGo(){
+            this.$emit("get",this.add);
+        },
+    },
 }
 </script>
 
@@ -66,13 +70,12 @@ export default {
             </div>
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Amount</label>
-            <input type="number" class="form-control" id="amount" v-model="plusNum">
+            <input type="number" class="form-control" id="amount" v-model="add.amount">
             </div>
         </form>
         </div>
         <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="numBtn" v-on:click="cool">Send message</button>
+        <button type="button" class="numBtn" @click="addGo" get="" >Send message</button>
         </div>
     </div>
     </div>
@@ -84,7 +87,7 @@ export default {
             <div class="items">
             <span>{{ item.name }}</span>
             <span>{{ item.money }}</span>
-            <p v-if = "money < 0 ">{{ item.money }}</p>
+            <p v-if = "amount < 0 ">{{ item.amount }}</p>
         </div>
             <button type="button" class="dltBtn">Delete</button>
         </div>

@@ -4,9 +4,14 @@
 export default {
     data(){
         return{
+            info:{
+                logEmail:"logEmail",
+                logPasw:"logPasw",
+            }
         }
     },
 }
+
 </script>
 
 <template>
@@ -15,13 +20,13 @@ export default {
     <form action="#" id="form">
     <div class="infoInput page">
     <label for="">Email</label>
-    <input type="email" placeholder="******@gmail.com" id="email">
+    <input type="email" placeholder="******@gmail.com" id="logEmail">
     <i class="fa-regular fa-envelope"></i>
     </div>
 
     <div class="infoInput page">
     <label for="">Name/Password</label>
-    <input type="text" placeholder="NameAndPassword" id="NameAndPassword">
+    <input type="text" placeholder="NameAndPassword" id="logPasw">
     <i class="fa-solid fa-user"></i>
     </div>
 </form>

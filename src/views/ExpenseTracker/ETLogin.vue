@@ -1,4 +1,19 @@
 <script>
+export default {
+    data(){
+        return{
+            logInfo:{
+                LogAc:"",
+                LogPas:"",
+            },
+        }
+    },
+    methods:{
+        login(){
+            console.log(this.logInfo);
+        }
+    }
+}
 </script>
 
 <template>
@@ -8,18 +23,18 @@
     <form action="#" id="form">
     <div class="infoInput page">
     <label for="">Account</label>
-    <input type="email" placeholder="Placeholder/Account" id="Account">
+    <input type="email" placeholder="Placeholder/Account" id="LogAc" v-model="logInfo.LogAc">
     </div>
 
     <div class="infoInput page">
     <label for="">Password</label>
-    <input type="text" placeholder="Placeholder/Password" id="Password">
+    <input type="text" placeholder="Placeholder/Password" id="LogPas" v-model="logInfo.LogPas">
     </div>
 </form>
 
     <div class="bttnArea page"> 
         <RouterLink to="/ETSignUp" class="signup Btn">Sign Up</RouterLink>
-        <button type="button" class="login Btn"><label for="" id="bttn">Log in</label></button>
+        <button type="button" class="login Btn" @click="login"><label for="" id="bttn">Log in</label></button>
     </div>
 </div>
     </div>

@@ -16,6 +16,7 @@ export default{
     methods: {
         infoGet(info){
             this.obj = info;
+            console.log(this.obj);//顯示於主控台
         },
         pageChange(){
             this.page = !this.page;

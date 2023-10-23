@@ -142,6 +142,11 @@ const router = createRouter({
       name: 'DataFlow',
       component: () => import('../views/DataFlow.vue')
     },
+    {
+      path: '/ProvideAndInject',
+      name: 'ProvideAndInject',
+      component: () => import('../views/ProvideAndInject.vue')
+    },
   ]
 })
 

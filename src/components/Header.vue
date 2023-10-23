@@ -48,6 +48,7 @@ import {RouterLink} from 'vue-router'
             </li>
             <RouterLink to="/Emit" class="Emit link">Emit</RouterLink>
             <RouterLink to="/DataFlow" class="DataFlow link">DataFlow</RouterLink>
+            <RouterLink to="/ProvideAndInject" class="ProvideAndInject link">Provide & Inject</RouterLink>
             <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="/ExpenseTracker" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             記帳

@@ -11,6 +11,9 @@ export default {
     methods:{
         login(){
             console.log(this.logInfo);
+            //跳出提示並轉跳頁面至記帳程式
+            alert("登入成功")
+            this.$router.push({path:'/ExpenseTracker'})
         }
     }
 }

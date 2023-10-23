@@ -9,6 +9,7 @@ export default {
             totalNum: 0,
             arr: [],
             add: {
+                id:"id",
                 text:"",
                 money:"",
             }
@@ -16,46 +17,53 @@ export default {
     },
     methods: {
         cool() {
-    let obj = {
-        name: this.add.text,
-        money: this.add.money,
-    };
+            let obj = {
+            name: this.add.text,
+            money: this.add.money,
+            };
 
-    // let obj2 = {
-    //     name: this.add.text,
-    //     money: this.add.money,
-    // };
+            // let obj2 = {
+            //     name: this.add.text,
+            //     money: this.add.money,
+            // };
 
-    this.arr.push(obj);
-    //this.arr.push(obj2);
+            this.arr.push(obj);
+            //this.arr.push(obj2);
 
-    this.totalNum = this.Total();
-    this.plusNum = this.Income();
-    this.neNum = this.Expense();
-    },
+            this.totalNum = this.Total();
+            this.plusNum = this.Income();
+            this.neNum = this.Expense();
+            },
 
-    addGo() {
-    this.arr.push({
-        name: this.add.text,
-        money: this.add.money,
-        });
-        this.totalNum = this.Total();
-        this.plusNum = this.Income();
-        this.neNum = this.Expense();
-        },
-    Total() {
+        addGo() {
+            this.arr.push({
+            name: this.add.text,
+            money: this.add.money,
+            });
+            this.totalNum = this.Total();
+            this.plusNum = this.Income();
+            this.neNum = this.Expense();
+            },
+
+        Total() {
         //累計輸入值
         return this.arr.reduce((total, item) => total + item.money, 0);
             },
+
         //篩選符合條件的值
         Income() {
-        return this.arr.filter(item => item.money > 0)
-        .reduce((total, item) => total + item.money, 0);
-            },
-        Expense() {
-        return this.arr.filter(item => item.money < 0)
+            return this.arr.filter(item => item.money > 0)
             .reduce((total, item) => total + item.money, 0);
             },
+
+        Expense() {
+            return this.arr.filter(item => item.money < 0)
+            .reduce((total, item) => total + item.money, 0);
+            },
+            
+        dltGo(){
+            this.arr.splice(id,1)
+        },
     }
 }
 </script>
@@ -65,17 +73,17 @@ export default {
     <div class="blueArea">
         <p>Expense Tracker</p>
         <p>your balance</p>
-        <h1>{{ totalNum }}</h1>
+        <h1>{{  "$"+totalNum }}</h1>
     </div>
     <div class="whiteArea">
         <div class="top">
         <div class="income Text">
             <p class="income">INCOME</p>
-            <h1 class="plusNum">{{ plusNum }}</h1>
+            <h1 class="plusNum">{{  "$"+ plusNum }}</h1>
         </div>
         <div class="expense Text">
             <p class="expense">EXPENSE</p>
-            <h1>{{ neNum }}</h1>
+            <h1>{{ "$"+neNum }}</h1>
         </div> 
         </div>
         <div class="btn">
@@ -85,19 +93,19 @@ export default {
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
         <form>
             <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Text</label>
             <input type="text" class="form-control" id="text" v-model="add.text">
-            {{ add.text }}
+            <!-- {{ add.text }} -->
             </div>
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Amount</label>
-            <input type="number" class="form-control" id="money" v-model="add.money">
-            {{ add.money }}
+            <input type="number" class="form-control" id="money" v-model.trim="add.money">
+            <!-- {{ add.money }} -->
             </div>
         </form>
         </div>
@@ -110,12 +118,31 @@ export default {
         </div>
         <!--原始<button type="button" class="AddBtn" v-on:click="cool" >Add transaction</button>-->
         <div class="content">
-        <div class="block" v-for="item in arr">
+        <div class="block" v-for="(item,id,index) in arr" id="id">
             <div class="items">
-            <span>{{ item.name }}</span>
+            <span>{{ id + 1 +". "}}{{ item.name }}</span>
             <span>{{ item.money }}</span>
         </div>
-            <button type="button" class="dltBtn">Delete</button>
+            <!-- <button type="button" class="dltBtn">Delete</button> -->
+            <!-- Button trigger modal -->
+<button type="button" class="dltBtn" data-bs-toggle="modal" data-bs-target="#dltexampleModal">
+Delete
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="dltexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sure to Delete?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" @click="dltGo(money)">Delete</button>
+        </div>
+    </div>
+    </div>
+</div>
         </div>
         </div>
     </div>

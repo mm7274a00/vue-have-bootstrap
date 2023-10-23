@@ -2,6 +2,7 @@
 export default {
     data(){
         return{
+            signArr:[],
             signInfo:{
                 SUAccount:"",
                 SUPasword:"",
@@ -11,7 +12,11 @@ export default {
     },
     methods:{
         signup(){
+            //目前做到console出值，預計使用localStorage網頁暫存功能完善
             console.log(this.signInfo);
+            alert("註冊成功")
+            this.$router.push({path:'/ETLogin'})
+
         }
     }
 }

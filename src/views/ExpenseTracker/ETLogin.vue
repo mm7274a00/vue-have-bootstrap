@@ -1,4 +1,6 @@
 <script>
+//做至console輸入的帳號密碼、頁面轉跳至記帳程式
+//預計結合註冊頁面添加的網頁暫存資料進行初步登入核對
 export default {
     data(){
         return{

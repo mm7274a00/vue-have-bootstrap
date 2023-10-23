@@ -38,14 +38,16 @@ export default {
     this.arr.push({
         name: this.add.text,
         money: this.add.money,
-    });
-    this.totalNum = this.Total();
-    this.plusNum = this.Income();
-    this.neNum = this.Expense();
-    },
+        });
+        this.totalNum = this.Total();
+        this.plusNum = this.Income();
+        this.neNum = this.Expense();
+        },
     Total() {
+        //累計輸入值
         return this.arr.reduce((total, item) => total + item.money, 0);
             },
+        //篩選符合條件的值
         Income() {
         return this.arr.filter(item => item.money > 0)
         .reduce((total, item) => total + item.money, 0);
@@ -89,11 +91,13 @@ export default {
         <form>
             <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Text</label>
-            <input type="text" class="form-control" id="text">
+            <input type="text" class="form-control" id="text" v-model="add.text">
+            {{ add.text }}
             </div>
             <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Amount</label>
-            <input type="number" class="form-control" id="amount" v-model="add.amount">
+            <input type="number" class="form-control" id="money" v-model="add.money">
+            {{ add.money }}
             </div>
         </form>
         </div>

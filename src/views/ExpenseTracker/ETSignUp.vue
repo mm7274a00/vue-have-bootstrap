@@ -12,10 +12,16 @@ export default {
     },
     methods:{
         signup(){
-            //目前做到console出值，預計使用localStorage網頁暫存功能完善
-            console.log(this.signInfo);
-            alert("註冊成功")
-            this.$router.push({path:'/ETLogin'})
+            //進行兩個密碼欄未驗證是否相符，如相符則傳送至網頁暫存資料
+            if (this.signInfo.SUPasword == this.signInfo.SURe){ 
+                localStorage.setItem('signInfo', JSON.stringify(this.signInfo));
+                console.log(this.signInfo);
+                alert("註冊成功")
+                this.$router.push({path:'/ETLogin'})
+            }
+            else{
+                alert("兩欄密碼不相符")
+            }
 
         }
     }
@@ -39,7 +45,7 @@ export default {
 
     <div class="infoInput page">
     <label for="">Password</label>
-    <input type="text" placeholder="Password" id="SURe" v-model="signInfo.SURe">
+    <input type="text" placeholder="RecheckPassword" id="SURe" v-model="signInfo.SURe">
     </div>
 </form>
 

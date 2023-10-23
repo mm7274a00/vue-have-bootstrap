@@ -29,7 +29,7 @@ export default {
     <form action="#" id="form">
     <div class="infoInput page">
     <label for="">Account</label>
-    <input type="email" placeholder="******@gmail.com" id="SUAccount" v-model="signInfo.SUAccount">
+    <input type="email" class="placeholder" placeholder="******@gmail.com" id="SUAccount" v-model="signInfo.SUAccount">
     </div>
 
     <div class="infoInput page">

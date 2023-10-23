@@ -30,19 +30,18 @@ export default {
             this.arr.push(obj);
             //this.arr.push(obj2);
 
+            //更新所有金額數值
             this.totalNum = this.Total();
             this.plusNum = this.Income();
             this.neNum = this.Expense();
             },
 
         addGo() {
+            
             this.arr.push({
             name: this.add.text,
             money: this.add.money,
-            });
-            this.totalNum = this.Total();
-            this.plusNum = this.Income();
-            this.neNum = this.Expense();
+            })
             },
 
         Total() {
@@ -50,19 +49,24 @@ export default {
         return this.arr.reduce((total, item) => total + item.money, 0);
             },
 
-        //篩選符合條件的值
+        //如輸入金額 > 0，歸類至Income
         Income() {
             return this.arr.filter(item => item.money > 0)
             .reduce((total, item) => total + item.money, 0);
             },
-
+        
+        //如輸入金額 < 0，歸類至Expense
         Expense() {
             return this.arr.filter(item => item.money < 0)
             .reduce((total, item) => total + item.money, 0);
             },
             
         dltGo(){
-            this.arr.splice(id,1)
+            this.arr.splice(id,1);
+
+            this.totalNum = this.Total();
+            this.plusNum = this.Income();
+            this.neNum = this.Expense();
         },
     }
 }
@@ -86,15 +90,16 @@ export default {
             <h1>{{ "$"+neNum }}</h1>
         </div> 
         </div>
-        <div class="btn">
-            <button type="button" class="AddBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add transaction
-            </button>
+
+        <!-- 使用Bootstrap元件建立彈出互動視窗 -->
+        <div class="AddArea">
+            <button type="button" class="AddBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add transaction</button>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
         <div class="modal-body">
         <form>
             <div class="mb-3">
@@ -114,35 +119,35 @@ export default {
         </div>
     </div>
     </div>
-</div>
+            </div>
         </div>
-        <!--原始<button type="button" class="AddBtn" v-on:click="cool" >Add transaction</button>-->
-        <div class="content">
+        
+    <div class="content">
         <div class="block" v-for="(item,id,index) in arr" id="id">
             <div class="items">
-            <span>{{ id + 1 +". "}}{{ item.name }}</span>
-            <span>{{ item.money }}</span>
-        </div>
-            <!-- <button type="button" class="dltBtn">Delete</button> -->
-            <!-- Button trigger modal -->
-<button type="button" class="dltBtn" data-bs-toggle="modal" data-bs-target="#dltexampleModal">
-Delete
-</button>
+                <span>{{ id + 1 +". "}}{{ item.name }}</span>
+                <span>{{ item.money }}</span>
+            </div>
 
-<!-- Modal -->
-<div class="modal fade" id="dltexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sure to Delete?</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" @click="dltGo(money)">Delete</button>
-        </div>
-    </div>
-    </div>
-</div>
+            <!-- 使用Bootstrap元件建立彈出互動視窗 -->
+            <div class="dltArea">
+                <button type="button" class="dltBtn" data-bs-toggle="modal" data-bs-target="#dltexampleModal"><p>Delete</p></button>
+                <div class="modal fade" id="dltexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sure to Delete?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" @click="dltGo(money)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         </div>
     </div>
@@ -234,9 +239,14 @@ Delete
         height: 29px;
         background-color: #A1B9C7;
         border: 0;
+        display: flex;
+        align-items: center;
         border-radius: 10px;
-        color: white;
-        font-size: 10pt;
+        p{
+            margin: auto;
+            color: white;
+            font-size: 10pt;
+        }
         } 
     }
     }

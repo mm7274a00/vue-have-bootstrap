@@ -17,17 +17,17 @@ export default {
     methods: {
         cool() {
     let obj = {
-        name: "income",
-        money: 100
+        name: this.add.text,
+        money: this.add.money,
     };
 
-    let obj2 = {
-        name: "expense",
-        money: -50
-    };
+    // let obj2 = {
+    //     name: this.add.text,
+    //     money: this.add.money,
+    // };
 
     this.arr.push(obj);
-    this.arr.push(obj2);
+    //this.arr.push(obj2);
 
     this.totalNum = this.Total();
     this.plusNum = this.Income();

@@ -7,6 +7,9 @@ export default{
             // dataArr:['str','arr','ass']
         }
     },
+    components:{
+        provideChild1
+    },
     // methods:{
     //     addItem(){
     //         this.dataArr.push("xxx")
@@ -44,7 +47,7 @@ export default{
 .warp{
     width: 600px;
     height: 600px;
-    border: 2px solid black;
+    border: 2px solid black;   
 }
 
 </style>

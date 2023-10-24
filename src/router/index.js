@@ -137,6 +137,11 @@ const router = createRouter({
       name: 'ProvideAndInject',
       component: () => import('../views/ProvideAndInject.vue')
     },
+    {
+      path: '/WatchAndComputed',
+      name: 'WatchAndComputed',
+      component: () => import('../views/WatchAndComputed.vue')
+    },
   ]
 })
 

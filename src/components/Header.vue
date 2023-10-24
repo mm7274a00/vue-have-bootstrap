@@ -21,6 +21,7 @@ import {RouterLink} from 'vue-router'
             <li><a class="down vTextAndVModel" href="/VtextAndVModel">V text & V Model</a></li>
             <li><a class="down vbind" href="/Vbind">V bind</a></li>
             <li><a class="down VifAndVshow" href="/VifAndVshow">V if &V show</a></li>
+            <RouterLink to="/WatchAndComputed" class="down VifAndVshow">Watch & Computed</RouterLink>
             </ul>
         </li>
         <li class="nav-item dropdown">

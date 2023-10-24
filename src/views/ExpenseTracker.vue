@@ -62,8 +62,9 @@ export default {
             },
             
         dltGo(){
+            //刪除該id的數值
             this.arr.splice(id,1);
-
+            //更新所有金額的數值
             this.totalNum = this.Total();
             this.plusNum = this.Income();
             this.neNum = this.Expense();
@@ -74,6 +75,7 @@ export default {
 
 <template>
     <div class="bgArea">
+
     <div class="blueArea">
         <p>Expense Tracker</p>
         <p>your balance</p>
@@ -123,7 +125,7 @@ export default {
         </div>
         
     <div class="content">
-        <div class="block" v-for="(item,id,index) in arr" id="id">
+        <div class="block" v-for="(item,id) in arr" id="id">
             <div class="items">
                 <span>{{ id + 1 +". "}}{{ item.name }}</span>
                 <span>{{ item.money }}</span>
@@ -151,6 +153,7 @@ export default {
         </div>
         </div>
     </div>
+
     </div>
 </template>
 

@@ -114,6 +114,7 @@ export default {
             padding-top: 5px;
             background-color: #ffffff;
             color: #3C7FA5;
+            text-decoration:none ;
             &:active{
                 color: #ffffff;
                 background-color: #A1B9C7;

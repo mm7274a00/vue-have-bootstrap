@@ -1,5 +1,7 @@
 <script>
 import child2 from "../components/child2.vue";
+import { mapState, mapActions } from 'pinia';
+import indexState from '../../stores/indexState';
 export default{
     data(){
         return{
@@ -14,7 +16,11 @@ export default{
         emitObj(params){
             console.log(params)//顯示於F12主控台
             this.childText = params
-        }
+        },        
+        ...mapActions(indexState,["setLocation"])
+    },
+    mounted(){
+        this.setLocation(3)
     }
 }
 </script>

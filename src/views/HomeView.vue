@@ -1,7 +1,5 @@
 <script>
-import test from ".."
-import { mapState, mapActions } from 'pinia';
-import indexState from '../../stores/indexState';
+
 </script>
 
 <template>

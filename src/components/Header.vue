@@ -12,18 +12,21 @@ export default {
         ...mapState(indexState, ["location", "locationInfo"])
     },
     methods:{
-        ...mapActions(indexState, ["getLocation","setLoctaion"]),
-        change(){
-            this.setLocation(2)
+        ...mapActions(indexState, ["getLocation","setLoctaion"])
         }
     }
-}
+
 </script>
 
 <template>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="headerShow">
-    <a class="home link" href="/">Home</a>
+    <a class="home link" href="/">
+        <i class="fa-solid fa-house"></i>
+    </a>
+
+    <RouterLink to="/VueAll" class="VueAll link">Vue語法</RouterLink>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -46,7 +49,7 @@ export default {
             <a class="practice link dropdown-toggle" href="" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             練習
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" @click="">
             <li><a class="down practice green1" href="/Green1">前端練習1</a></li>
             <li><a class="down practice green1" href="/Green2">前端練習1(2)</a></li>
             <li><a class="down practice guessNumber link2" href="/GuessNumber">猜數字</a></li>
@@ -65,9 +68,11 @@ export default {
             <li class="nav-item">
             <a class="nav link active" aria-current="page" href="/Props">Props</a>
             </li>
-            <RouterLink to="/Emit" class="Emit link">Emit</RouterLink>
+            <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
+
             <RouterLink to="/DataFlow" class="DataFlow link">DataFlow</RouterLink>
             <RouterLink to="/ProvideAndInject" class="ProvideAndInject link">Provide & Inject</RouterLink>
+            <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink>
             <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="/ExpenseTracker" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             記帳
@@ -81,8 +86,12 @@ export default {
     </div>
     </div>
 </nav>
-<h3>{{ location }}</h3>
-<h3>{{ locationInfo }}</h3>
+<div class="pinia">
+    <p>pinia in Header</p>
+    <p>{{ location }}</p>
+    <p>{{ locationInfo }}</p>
+</div>
+
 
 <!--<div class="headerShow">
     <RouterLink to="/" class="home link">Home</RouterLink>
@@ -96,15 +105,17 @@ export default {
 
 <style lang="scss" scoped>
 .headerShow{
+    position: fixed;
+    z-index: 2;
     margin: -50px;
-    margin-top: -10px;
+    margin-top: -20px;
     margin-bottom: 20px;
     width: 150%;
     height: 70px;
     background-color: rgb(163, 198, 226);
     display: flex;
     .link{
-        //border: 2px solid black;
+        // border: 2px solid black;
         margin: auto 20px;
         font-size: 20pt;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -115,6 +126,13 @@ export default {
         }
     }
 }
+.fa-house{
+    font-size: 30pt;
+    color: rgb(255, 255, 255);
+    &:hover{
+            color: rgb(13, 91, 154);
+        }
+    }
 .dropdown-menu{
     padding: 5px;
     background-color: rgb(245, 245, 245);
@@ -132,5 +150,23 @@ export default {
 }
 .navbar{
     height: 100px;
+}
+.pinia{
+    z-index: 1;
+    position: fixed;
+    margin-left: 90%;
+    margin-top: 200px;
+    width: 110px;
+    height: 140px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px;
+    p{
+        font-size: 10pt;
+    }
+}
+.cass{
+    background-color: rgb(242, 184, 184);
+    border-radius: 10px;
 }
 </style>

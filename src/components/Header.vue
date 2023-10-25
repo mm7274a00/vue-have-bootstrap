@@ -1,5 +1,24 @@
-<script setup>
-import {RouterLink} from 'vue-router'
+<script>
+import { RouterLink } from 'vue-router'
+import { mapState, mapActions } from 'pinia';
+import indexState from '../../stores/indexState';
+
+export default {
+    data(){
+        return{
+            num: 1,
+        }
+    },
+    components:{
+        RouterLink,
+    },
+    computed:{
+        ...mapState(indexState,["location", "locationInfo"])
+    },
+    methods:{
+        ...mapActions(indexState, ["getLocation","setLoctaion"])
+    }
+}
 </script>
 
 <template>
@@ -63,6 +82,8 @@ import {RouterLink} from 'vue-router'
     </div>
     </div>
 </nav>
+<h3>{{ location }}</h3>
+<h3>{{ locationInfo }}</h3>
 
 <!--<div class="headerShow">
     <RouterLink to="/" class="home link">Home</RouterLink>

@@ -14,4 +14,4 @@ const pinia = createPinia();
 app.use(router)
 app.use(pinia)
 
-app.mount('#app')
+app.mount('#app')//讀完這條下面的資料不會再讀

@@ -86,10 +86,62 @@ export default {
     </div>
     </div>
 </nav>
+
+<div class="navLeft">
+  
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h1 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Vue語法</button>
+      </h1>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
+        <a button type="button" class="vueBtn" href="/Emit">Emit  </a>
+        <a button type="button" class="vueBtn" href="/Pinia">Pinia</a>
+        <a button type="button" class="vueBtn" href="/Props">Props</a>
+        <a button type="button" class="vueBtn" href="/ProvideAndInject">Provide & Inject</a>
+        <a button type="button" class="vueBtn" href="/Vbind">V bind</a>
+        <a button type="button" class="vueBtn" href="/VFor">V for</a>
+        <a button type="button" class="vueBtn" href="/Von">V on</a>
+        <a button type="button" class="vueBtn" href="/VtextAndVModel">V text & V Model</a>
+        <a button type="button" class="vueBtn" href="/VifAndVshow">V if & V show</a>
+        <a button type="button" class="vueBtn" href="/VueRouter">VueRouter</a>
+        <a button type="button" class="vueBtn" href="/WatchAndComputed">Watch & Computed</a>
+        </div>
+          </div>
+        </div>
+    </div>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h1 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Vue語法</button>
+      </h1>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
+        <a button type="button" class="vueBtn" href="/Emit">Emit  </a>
+        <a button type="button" class="vueBtn" href="/Pinia">Pinia</a>
+        <a button type="button" class="vueBtn" href="/Props">Props</a>
+        <a button type="button" class="vueBtn" href="/ProvideAndInject">Provide & Inject</a>
+        <a button type="button" class="vueBtn" href="/Vbind">V bind</a>
+        <a button type="button" class="vueBtn" href="/VFor">V for</a>
+        <a button type="button" class="vueBtn" href="/Von">V on</a>
+        <a button type="button" class="vueBtn" href="/VtextAndVModel">V text & V Model</a>
+        <a button type="button" class="vueBtn" href="/VifAndVshow">V if & V show</a>
+        <a button type="button" class="vueBtn" href="/VueRouter">VueRouter</a>
+        <a button type="button" class="vueBtn" href="/WatchAndComputed">Watch & Computed</a>
+        </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
 <div class="pinia">
     <p>pinia in Header</p>
     <p>{{ location }}</p>
     <p>{{ locationInfo }}</p>
+    
 </div>
 
 
@@ -104,6 +156,27 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.navLeft{
+    position: absolute;
+    position: fixed;
+    margin-left: -55px;
+    margin-top: -35px;
+    height: 100vh;
+    width: 190px;
+    background-color: rgb(241, 241, 241);
+    .vueBtn{
+    margin-left: -20px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-top: 8px;
+    font-size: 12pt;
+    width: 190px;
+    height: 40px;
+    text-decoration: none;
+    background-color: rgb(155, 167, 192);
+    color: white;
+}
+}
 .headerShow{
     position: fixed;
     z-index: 2;
@@ -154,8 +227,9 @@ export default {
 .pinia{
     z-index: 1;
     position: fixed;
-    margin-left: 90%;
-    margin-top: 200px;
+    right: 0;
+    bottom: 0;
+    // margin-top: 500px;
     width: 110px;
     height: 140px;
     border: 2px solid black;
@@ -169,4 +243,6 @@ export default {
     background-color: rgb(242, 184, 184);
     border-radius: 10px;
 }
+
+
 </style>

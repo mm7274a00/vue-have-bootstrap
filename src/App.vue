@@ -16,6 +16,8 @@ import Header from "./components/Header.vue"
 .fullpage{
   padding: 0 50px;
   padding-bottom: 5%;
-  border: 5px solid rgb(163, 198, 226);
+}
+.viewsPage{
+  margin-left: 180px;
 }
 </style>

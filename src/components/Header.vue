@@ -4,19 +4,18 @@ import { mapState, mapActions } from 'pinia';
 import indexState from '../../stores/indexState';
 
 export default {
-    data(){
-        return{
-            num: 1,
-        }
-    },
     components:{
         RouterLink,
     },
     computed:{
-        ...mapState(indexState,["location", "locationInfo"])
+        //  參數：1. 資料庫 2.要取用的 state & getters
+        ...mapState(indexState, ["location", "locationInfo"])
     },
     methods:{
-        ...mapActions(indexState, ["getLocation","setLoctaion"])
+        ...mapActions(indexState, ["getLocation","setLoctaion"]),
+        change(){
+            this.setLocation(2)
+        }
     }
 }
 </script>

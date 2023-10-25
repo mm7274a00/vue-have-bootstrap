@@ -24,27 +24,11 @@ export default {
     <a class="home link" href="/">
         <i class="fa-solid fa-house"></i>
     </a>
-
-    <RouterLink to="/VueAll" class="VueAll link">Vue語法</RouterLink>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-            <a class="practice link dropdown-toggle" href="/VueUse" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Vue語法
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="down vfor" href="/Vfor">V for</a></li>
-            <li><a class="down von" href="/Von">V on</a></li>
-            <li><a class="down vTextAndVModel" href="/VtextAndVModel">V text & V Model</a></li>
-            <li><a class="down vbind" href="/Vbind">V bind</a></li>
-            <li><a class="down VifAndVshow" href="/VifAndVshow">V if &V show</a></li>
-            <RouterLink to="/WatchAndComputed" class="down VifAndVshow">Watch & Computed</RouterLink>
-            </ul>
-        </li>
         <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             練習
@@ -53,7 +37,6 @@ export default {
             <li><a class="down practice green1" href="/Green1">前端練習1</a></li>
             <li><a class="down practice green1" href="/Green2">前端練習1(2)</a></li>
             <li><a class="down practice guessNumber link2" href="/GuessNumber">猜數字</a></li>
-            <li><a class="down practice ExpenseTracker link2" href="/ExpenseTracker">記帳程式</a></li>
             <li><a class="down practice sweet" href="/Sweet">甜點</a></li>
             <li><a class="down fall" href="/Fall">瀑布流</a></li>
             </ul>
@@ -62,16 +45,8 @@ export default {
             <li class="nav-item">
             <a class="nav link active" aria-current="page" href="/HW/HwHome">房地產</a>
             </li>
-            <li class="nav-item">
-            <a class="nav link active" aria-current="page" href="/VueRouter">VueRouter</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav link active" aria-current="page" href="/Props">Props</a>
-            </li>
-            <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
 
-            <RouterLink to="/DataFlow" class="DataFlow link">DataFlow</RouterLink>
-            <RouterLink to="/ProvideAndInject" class="ProvideAndInject link">Provide & Inject</RouterLink>
+            <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
             <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink>
             <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="/ExpenseTracker" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -98,30 +73,8 @@ export default {
       <div class="accordion-body">
         <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
         <a button type="button" class="vueBtn" href="/Emit">Emit  </a>
-        <a button type="button" class="vueBtn" href="/Pinia">Pinia</a>
-        <a button type="button" class="vueBtn" href="/Props">Props</a>
-        <a button type="button" class="vueBtn" href="/ProvideAndInject">Provide & Inject</a>
-        <a button type="button" class="vueBtn" href="/Vbind">V bind</a>
-        <a button type="button" class="vueBtn" href="/VFor">V for</a>
-        <a button type="button" class="vueBtn" href="/Von">V on</a>
-        <a button type="button" class="vueBtn" href="/VtextAndVModel">V text & V Model</a>
-        <a button type="button" class="vueBtn" href="/VifAndVshow">V if & V show</a>
-        <a button type="button" class="vueBtn" href="/VueRouter">VueRouter</a>
-        <a button type="button" class="vueBtn" href="/WatchAndComputed">Watch & Computed</a>
-        </div>
-          </div>
-        </div>
-    </div>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-    <div class="accordion-item">
-      <h1 class="accordion-header" id="panelsStayOpen-headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Vue語法</button>
-      </h1>
-      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body">
-        <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
-        <a button type="button" class="vueBtn" href="/Emit">Emit  </a>
-        <a button type="button" class="vueBtn" href="/Pinia">Pinia</a>
+        <!-- <a button type="button" class="vueBtn" href="/Pinia">Pinia</a> -->
+        <RouterLink to="/Pinia" class="Pinia link vueBtn" :class="{'cass' : this.location === 2}">Pinia</RouterLink>
         <a button type="button" class="vueBtn" href="/Props">Props</a>
         <a button type="button" class="vueBtn" href="/ProvideAndInject">Provide & Inject</a>
         <a button type="button" class="vueBtn" href="/Vbind">V bind</a>
@@ -165,17 +118,17 @@ export default {
     width: 190px;
     background-color: rgb(241, 241, 241);
     .vueBtn{
-    margin-left: -20px;
-    margin-bottom: 5px;
-    padding-left: 20px;
-    padding-top: 8px;
-    font-size: 12pt;
-    width: 190px;
-    height: 40px;
-    text-decoration: none;
-    background-color: rgb(155, 167, 192);
-    color: white;
-}
+      margin-left: -20px;
+      margin-bottom: 5px;
+      padding-left: 20px;
+      padding-top: 8px;
+      font-size: 12pt;
+      width: 190px;
+      height: 40px;
+      text-decoration: none;
+      background-color: rgb(155, 167, 192);
+      color: white;
+      }
 }
 .headerShow{
     position: fixed;
@@ -189,7 +142,8 @@ export default {
     display: flex;
     .link{
         // border: 2px solid black;
-        margin: auto 20px;
+        margin: auto 20px;  
+        margin-bottom: -5px;
         font-size: 20pt;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-decoration:none ;
@@ -240,8 +194,10 @@ export default {
     }
 }
 .cass{
-    background-color: rgb(242, 184, 184);
+    border: 2px solid black;
+    background-color: rgb(64, 24, 134);
     border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 
 

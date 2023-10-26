@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-<h1>ComB</h1>
+    <h3>ComB</h3>
 </template>
 
 <style lang="scss" scoped>

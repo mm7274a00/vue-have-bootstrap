@@ -39,7 +39,7 @@ export default{
 
 <style lang="scss" scoped>
 .show{
-    background-color: aqua;
+    background-color: rgb(185, 215, 248);
     width: 500px;
     height: 500px;
 }

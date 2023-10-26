@@ -39,6 +39,7 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
 $maincolor:#475467;
 .header{
     background-color: white;
@@ -48,7 +49,7 @@ $maincolor:#475467;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    border: 2px solid black;
+    border: 2px solid #475467;
 
     
 .box{

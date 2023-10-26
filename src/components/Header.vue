@@ -63,18 +63,18 @@ export default {
 </nav>
 
 <div class="navLeft">
-  
-  <div class="accordion" id="accordionPanelsStayOpenExample">
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
-      <h1 class="accordion-header" id="panelsStayOpen-headingOne">
+        <h1 class="accordion-header" id="panelsStayOpen-headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Vue語法</button>
-      </h1>
-      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body">
+        </h1>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div class="accordion-body">
         <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
         <a button type="button" class="vueBtn" href="/Emit">Emit  </a>
-        <!-- <a button type="button" class="vueBtn" href="/Pinia">Pinia</a> -->
-        <RouterLink to="/Pinia" class="Pinia link vueBtn" :class="{'cass' : this.location === 2}">Pinia</RouterLink>
+        <a button type="button" class="vueBtn" href="/Pinia">Pinia</a>
+        <!-- <RouterLink to="/Pinia" class="Pinia link vueBtn" :class="{'cass' : this.location === 2}">Pinia</RouterLink> -->
         <a button type="button" class="vueBtn" href="/Props">Props</a>
         <a button type="button" class="vueBtn" href="/ProvideAndInject">Provide & Inject</a>
         <a button type="button" class="vueBtn" href="/Vbind">V bind</a>
@@ -85,10 +85,10 @@ export default {
         <a button type="button" class="vueBtn" href="/VueRouter">VueRouter</a>
         <a button type="button" class="vueBtn" href="/WatchAndComputed">Watch & Computed</a>
         </div>
-          </div>
+            </div>
         </div>
     </div>
-  </div>
+    </div>
 
 <div class="pinia">
     <p>pinia in Header</p>
@@ -109,45 +109,50 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.accordion-button{
+    margin-bottom: -5px;
+}
 .navLeft{
-    position: absolute;
+    z-index: 2;
     position: fixed;
-    margin-left: -55px;
-    margin-top: -35px;
+    margin-left: -50px;
     height: 100vh;
     width: 190px;
     background-color: rgb(241, 241, 241);
+    border: 5px solid rgb(241, 241, 241);
     .vueBtn{
-      margin-left: -20px;
-      margin-bottom: 5px;
-      padding-left: 20px;
-      padding-top: 8px;
-      font-size: 12pt;
-      width: 190px;
-      height: 40px;
-      text-decoration: none;
-      background-color: rgb(155, 167, 192);
-      color: white;
-      }
+        margin-left: -20px;
+        margin-bottom: 4px;
+        padding-left: 15px;
+        padding-top: 8px;
+        font-size: 12pt;
+        width: 180px;
+        height: 40px;
+        text-decoration: none;
+        border-radius: 5px;
+        background-color: rgb(155, 167, 192);
+        color: white;
+        }
 }
 .headerShow{
     position: fixed;
     z-index: 2;
     margin: -50px;
-    margin-top: -20px;
-    margin-bottom: 20px;
     width: 150%;
-    height: 70px;
+    height: 80px;
     background-color: rgb(163, 198, 226);
     display: flex;
     .link{
         // border: 2px solid black;
-        margin: auto 20px;  
-        margin-bottom: -5px;
+        height: 80PX;
+        margin: auto 20px;
         font-size: 20pt;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-decoration:none ;
         color: white;
+        display: flex  ;
+        justify-content: center;
+        align-items: center;
         &:hover{
             color: rgb(13, 91, 154);
         }
@@ -176,7 +181,8 @@ export default {
 }
 }
 .navbar{
-    height: 100px;
+    height: 80px;
+    padding: 0;
 }
 .pinia{
     z-index: 1;
@@ -194,11 +200,9 @@ export default {
     }
 }
 .cass{
-    border: 2px solid black;
-    background-color: rgb(64, 24, 134);
+    background-color: rgb(5, 5, 5);
     border-radius: 10px;
     color: rgb(255, 255, 255);
 }
-
 
 </style>

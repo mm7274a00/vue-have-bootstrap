@@ -18,6 +18,7 @@ import Header from "./components/Header.vue"
   padding-bottom: 5%;
 }
 .viewsPage{
+  margin-top: 30px;
   margin-left: 180px;
 }
 </style>

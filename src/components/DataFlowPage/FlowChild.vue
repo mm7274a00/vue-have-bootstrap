@@ -35,6 +35,7 @@ export default{
     height: 200px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
     input{
         width: 200px;
     }

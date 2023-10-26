@@ -102,12 +102,12 @@ const router = createRouter({
       component: () => import('../views/VueRouter.vue'),
       children: [
         {
-          path: 'ComA',
-          component: () => import('../components/RouterComA.vue')
+          path: 'RouterComA',
+          component: () => import('../components/RouterComPage/RouterComA.vue')
         },
         {
-          path: 'ComB',
-          component: () => import('../components/RouterComA.vue')
+          path: 'RouterComB',
+          component: () => import('../components/RouterComPage/RouterComB.vue')
         },
       ]
     },

@@ -211,7 +211,7 @@ export default {
     }
 }
 .cass{
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(0, 0, 0);
     border-radius: 10px;
     color: rgb(255, 255, 255);
 }

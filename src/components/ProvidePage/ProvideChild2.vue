@@ -8,7 +8,8 @@ export default{
     inject:[
     "msg",
     "cool",
-    "arr"
+    "arr",
+    "setupMSG"
     ]
 }
 </script>
@@ -24,10 +25,5 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-.warp{
-
-    border: 1px solid black;
-    background-color: aqua;
-}
 
 </style>

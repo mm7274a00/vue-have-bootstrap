@@ -1,6 +1,6 @@
 <script>
 import child from "../components/PropsAndEmitPage/child.vue";
-import child2 from "../components/PropsAndEmitPage/child2.vue";
+import child1 from "../components/PropsAndEmitPage/child1.vue";
 export default {
     data(){
         return{
@@ -31,21 +31,25 @@ export default {
     },
     components: {
         child,
-        child2
+        child1
+
     }
 }
 </script>
 
 <template>
     <h1>Props：</h1>
-    <p>。父傳子，為單一數據流，禁止使用v-model綁變數</p>
+    <p>。父傳子，為單一數據流</p>
+    <p>。不應使用 input 綁 v-model，此為 Vue 的 Bug，容易竄改資料</p>
     <p>。宣告props:["變數"]，顯示值"{ { this.變數} }"</p>
 
-    <div v-if="page == 1" class="show">
+<div class="under">
+    <div v-if="page == 1" class="show 1">
         <!--填寫註冊帳戶資訊的版面-->
         <!--註冊帳戶的版面-->
-        <child />
-        <!--<label for="">姓名</label>
+        <!-- <child /> -->
+        <h4>Props表單頁面</h4>
+        <label for="">姓名</label>
         <input type="text" v-model="signInfo.name">
         <label for="">電話</label>
         <input type="text" v-model="signInfo.phone">
@@ -59,32 +63,52 @@ export default {
         <label for="">性別</label>
         <div class="genderArea">
             <label for="">男</label>
-            <input type="radio" v-model="signInfo.gender">
+            <input type="radio" value="男" v-model="signInfo.gender">
             <label for="">女</label>
-            <input type="radio" v-model="signInfo.gender">
+            <input type="radio" value="女" v-model="signInfo.gender">
         </div>
 
         <label for="">興趣</label>
-        <input type="text" v-model="signInfo.favorite">-->
-
+        <input type="text" v-model="signInfo.favorite">
+        <br>
         <button type="button" @click="changePage()">Next</button>
 
     </div>
 
-    <div v-if="page == 2" class="show2">
+    <div v-if="page == 2" class="show 2">
     <!--在 child 中設計確認帳戶資訊的版面-->
     <!--    {{ this.personal }}-->
-    {{ this.signInfo }}
+    <!-- {{ this.signInfo }} -->
     <child :person="personal" :sign="signInfo" />
     </div>
+
+    <div class="text">
+        <h4>如左側範例：</h4> 
+
+    </div>
+</div>
+
 </template>
 
 <style lang="scss" scoped>
-.show{
+.under{
+    display: flex;
+    .text{
+        margin-top: 65px;
+        margin-left: 100px;
+    }
+
+    .show{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    }
 }
+
 
 </style>

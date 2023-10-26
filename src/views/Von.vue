@@ -30,7 +30,7 @@ export default{
     <h4>範例1</h4>
     <!-- <button type="button" v-on:click="print()">btn</button> -->
     <button type="button" @click="print()">btn</button> 
-    - 點擊按鈕執行print() -> console.log 出 cool
+    - 點擊按鈕執行print（） -> console.log 出 cool
     <br>
     <br>
 
@@ -45,7 +45,7 @@ export default{
     
     <h4>範例3</h4>
     <input type="text" v-model="this.text">
-    <button type="button" @click="write()">write</button> - 列印出輸入的內容
+    <button type="button" @click="write()">write</button> - 輸入資料點擊按鈕執行write（） -> console.log出輸入的內容
 </template>
 
 <style lang="scss" scoped>

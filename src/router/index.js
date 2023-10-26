@@ -114,11 +114,11 @@ const router = createRouter({
     {
       path: '/Props',
       name: 'Props',
-      component: () => import('../views/Props.vue')
+      component: () => import('../views/Props.vue'),
       // children: [
       //   {
       //     path: 'child',
-      //     component: () => import('../components/PropsAndEmitPage/child.vue')
+      //     component: () => import('../components/propsAndEmitPage/child.vue')
       //   }
       // ]
     },
@@ -144,7 +144,7 @@ const router = createRouter({
       component: () => import('../views/ProvideAndInject.vue'),
       children: [
         {
-          path: 'child1',
+          path: 'Providechild1',
           component: () => import('../components/ProvidePage/Providechild1.vue')
         }
       ]

@@ -21,10 +21,9 @@ export default{
 
 <style lang="scss" scoped>
 .warp{
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     border: 1px solid black;
-    background-color: palevioletred; 
 }
 
 </style>

@@ -1,5 +1,5 @@
 <script>
-import child2 from "../components/child2.vue";
+import child2 from "../components/PropsAndEmitPage/child2.vue";
 import { mapState, mapActions } from 'pinia';
 import indexState from '../../stores/indexState';
 export default{

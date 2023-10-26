@@ -21,15 +21,18 @@ export default {
 <template>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="headerShow">
+
     <a class="home link" href="/">
         <i class="fa-solid fa-house"></i>
-    </a>
+        </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-        <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             練習
             </a>
@@ -40,25 +43,25 @@ export default {
             <li><a class="down practice sweet" href="/Sweet">甜點</a></li>
             <li><a class="down fall" href="/Fall">瀑布流</a></li>
             </ul>
-            </li>
+                </li>
 
-            <li class="nav-item">
-            <a class="nav link active" aria-current="page" href="/HW/HwHome">房地產</a>
+            <li class="nav-item dropdown">
+                <a class="practice link dropdown-toggle" href="/ExpenseTracker" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">記帳
+                </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="down practice ET" href="/ExpenseTracker">記帳</a></li>
+            <li><a class="down practice ET" href="/ETLogin">Login</a></li>
+                </ul>
             </li>
 
             <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
             <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink>
-            <li class="nav-item dropdown">
-            <a class="practice link dropdown-toggle" href="/ExpenseTracker" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            記帳
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="down practice ET" href="/ExpenseTracker">記帳</a></li>
-            <li><a class="down practice ET" href="/ETLogin">Login</a></li>
+            <RouterLink to="/HW/HwHome" class="HwHome link">房地產</RouterLink>
+            <RouterLink to="/Notes" class="Notes link">Notes</RouterLink>
+            
             </ul>
-            </li>
-            </ul>
-    </div>
+        </div>
     </div>
 </nav>
 
@@ -88,6 +91,7 @@ export default {
             </div>
         </div>
     </div>
+
     </div>
 
 <div class="pinia">
@@ -132,6 +136,10 @@ export default {
         border-radius: 5px;
         background-color: rgb(155, 167, 192);
         color: white;
+        &:hover{
+            color: rgb(13, 91, 154);
+            background-color: white;
+        }
         }
 }
 .headerShow{
@@ -159,8 +167,11 @@ export default {
     }
 }
 .fa-house{
-    font-size: 30pt;
+    margin-right: 30px;
+    width: 140px;
+    font-size: 35pt;
     color: rgb(255, 255, 255);
+    text-align: center;
     &:hover{
             color: rgb(13, 91, 154);
         }

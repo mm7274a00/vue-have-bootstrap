@@ -14,11 +14,12 @@ export default {
 </script>
 
 <template>
-
 <p>【Vbind】</p>
 <p> 。 v- model : 綁定標籤的值</p>
 <p> 。 v-bind : 綁定標籤屬性</p>
 
+<div class="bgArea">
+    <div class="left Box">
     <h1 class="cool">COOL1</h1>
     <h2 v-bind:class="title">COOL2</h2>
     <!--<h2 :class="title">COOL2</h2>-->
@@ -48,12 +49,26 @@ export default {
 
     <h2 :class="styleArr">在那裡</h2>
 
-    <img :src="imgText" alt="" style="width: 18rem;">
+</div>
+    <div class="right Box">
+        <img :src="imgText" alt="" style="width: 18rem;">
+        <p>。也可使用於圖片</p>
+    </div>
+</div>
+
+
 
 
 </template>
 
 <style lang="scss" scoped>
+.bgArea{
+    display: flex;
+    margin-top: 50px;
+    .Box{
+        margin-right: 200px;
+    }
+}
 .cool{
     color: rgb(183, 172, 255);
 }

@@ -114,7 +114,13 @@ const router = createRouter({
     {
       path: '/Props',
       name: 'Props',
-      component: () => import('../components/Props.vue')
+      component: () => import('../views/Props.vue')
+      // children: [
+      //   {
+      //     path: 'child',
+      //     component: () => import('../components/PropsAndEmitPage/child.vue')
+      //   }
+      // ]
     },
     {
       path: '/Emit',
@@ -123,7 +129,7 @@ const router = createRouter({
       children: [
         {
           path: 'child2',
-          component: () => import('../components/child2.vue')
+          component: () => import('../components/PropsAndEmitPage/child2.vue')
         }
       ]
     },
@@ -152,6 +158,11 @@ const router = createRouter({
       path: '/Pinia',
       name: 'Pinia',
       component: () => import('../views/Pinia.vue')
+    },
+    {
+      path: '/Notes',
+      name: 'Notes',
+      component: () => import('../views/Notes.vue')
     },
   ]
 })

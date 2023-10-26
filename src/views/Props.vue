@@ -1,6 +1,6 @@
 <script>
-import child from "../components/child.vue";
-import child2 from "../components/child2.vue";
+import child from "../components/PropsAndEmitPage/child.vue";
+import child2 from "../components/PropsAndEmitPage/child2.vue";
 export default {
     data(){
         return{

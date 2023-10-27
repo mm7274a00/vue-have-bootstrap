@@ -34,7 +34,7 @@ export default {
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
             <a class="practice link dropdown-toggle" href="" id="practice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            練習
+            版面練習
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" @click="">
             <li><a class="down practice green1" href="/Green1">前端練習1</a></li>
@@ -55,8 +55,8 @@ export default {
                 </ul>
             </li>
 
-            <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
-            <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink>
+            <!-- <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
+            <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink> -->
             <RouterLink to="/HW/HwHome" class="HwHome link">房地產</RouterLink>
             <RouterLink to="/Notes" class="Notes link">Notes</RouterLink>
             
@@ -75,9 +75,8 @@ export default {
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
         <div class="accordion-body">
         <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
-        <a button type="button" class="vueBtn" href="/Emit">Emit  </a>
-        <a button type="button" class="vueBtn" href="/Pinia">Pinia</a>
-        <!-- <RouterLink to="/Pinia" class="Pinia link vueBtn" :class="{'cass' : this.location === 2}">Pinia</RouterLink> -->
+        <a button type="button" class="vueBtn" :class="{'cass' : this.location === 3}" href="/Emit">Emit  </a>
+        <a button type="button" class="vueBtn" :class="{'cass' : this.location === 2}" href="/Pinia">Pinia</a>
         <a button type="button" class="vueBtn" href="/Props">Props</a>
         <a button type="button" class="vueBtn" href="/ProvideAndInject">Provide & Inject</a>
         <a button type="button" class="vueBtn" href="/Vbind">V bind</a>
@@ -141,6 +140,11 @@ export default {
             background-color: white;
         }
         }
+    .cass{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
 }
 .headerShow{
     position: fixed;

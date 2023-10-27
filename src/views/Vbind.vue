@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-<p>【Vbind】</p>
+<h1>V bind</h1>
 <p> 。 v- model : 綁定標籤的值</p>
 <p> 。 v-bind : 綁定標籤屬性</p>
 
@@ -25,30 +25,29 @@ export default {
     <!--<h2 :class="title">COOL2</h2>-->
 
     <h2> class{}</h2>
-    <label for="">isRed</label>
-    <input type="checkbox" value="true" v-model="isRed">
-
-    <label for="">isLarge</label>
-    <input type="checkbox" value="true" v-model="isLarge">
-    <!--未啟動時，h2無class名稱-->
-
+<br>
     <h2 :class="{
         red: isRed,
         large: isLarge,
         }">在這裡</h2>
-    <!--當isRed/isLarge，賦予class名稱-->
+    <label for="">isRed</label>
+    <input type="checkbox" value="true" v-model="isRed">
+    <label for="">isLarge</label>
+    <input type="checkbox" value="true" v-model="isLarge">
+    <br><br>
+    <p>。 未勾選時，h2無class名稱</p>
+    <p>。 當isRed/isLarge，賦予class名稱</p>
+<br>
 
-    <!-- styleArr是變數，記得在data(){}中宣告並使他成為 空陣列 -->
     <h3>class []</h3>
+    <h2 :class="styleArr">在那裡</h2>
     <label for="">Red</label>
     <input type="checkbox" value="red" v-model="styleArr">
     <label for="">Large</label>
     <input type="checkbox" value="large" v-model="styleArr" disabled>
     <label for="">bold</label>
     <input type="checkbox" value="bold" v-model="styleArr">
-
-    <h2 :class="styleArr">在那裡</h2>
-
+    <p>。styleArr是變數，記得在data(){}中宣告並使他成為 空陣列</p>
 </div>
     <div class="right Box">
         <img :src="imgText" alt="" style="width: 18rem;">
@@ -71,9 +70,6 @@ export default {
 }
 .cool{
     color: rgb(183, 172, 255);
-}
-p{
-    font-size: 14pt;
 }
 .red{
     color: rgb(255, 76, 76);

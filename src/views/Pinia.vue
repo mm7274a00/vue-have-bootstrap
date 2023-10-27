@@ -25,7 +25,7 @@ export default{
 
 <h4>配合生命週期</h4>    
 <p>。添加 mounted(){this.setLocation(2)}，則location值顯示為2</p>
-<p>。Header中設定:class="{'cass' : this.location === 2} ，背景顏色顯示為黑色，Emit則設定為3，即可達到標示當前頁的功能（如Header的Emit及Pinia）</p>
+<p>。Header中設定:class="{'cass' : this.location === 2} ，背景顏色顯示為黑色，Emit則設定為3，即可達到標示當前頁的功能（如左側的Emit及Pinia）</p>
 </template>
 
 <style lang="scss" scoped>

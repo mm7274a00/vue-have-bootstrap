@@ -3,21 +3,29 @@ export default {
     data(){
         return{
             signArr:[],
+            SURe:"",
             signInfo:{
                 SUAccount:"",
                 SUPasword:"",
-                SURe:"",
             },
+            key:"signInfo.SUAccount.value",
         }
     },
     methods:{
         signup(){
+            //檢查欄位是否填寫完畢
+            if(this.signInfo.SUAccount == "" || this.signInfo.SUPasword == "" || this.SURe == ""){
+                alert("請填寫空白欄位")
+                return
+            }
             //進行兩個密碼欄未驗證是否相符，如相符則傳送至網頁暫存資料
-            if (this.signInfo.SUPasword == this.signInfo.SURe){ 
-                localStorage.setItem('signInfo', JSON.stringify(this.signInfo));
+            if (this.signInfo.SUPasword == this.SURe){ 
+                this.signArr.push(this.signInfo)
+                localStorage.setItem('signInfo', JSON.stringify(this.signArr));
                 console.log(this.signInfo);
-                alert("註冊成功")
-                this.$router.push({path:'/ETLogin'})
+
+                // alert("註冊成功")
+                // this.$router.push({path:'/ETLogin'})
             }
             else{
                 alert("兩欄密碼不相符")
@@ -45,7 +53,7 @@ export default {
 
     <div class="infoInput page">
     <label for="">Password</label>
-    <input type="text" placeholder="RecheckPassword" id="SURe" v-model="signInfo.SURe">
+    <input type="text" placeholder="RecheckPassword" id="SURe" v-model="SURe">
     </div>
 </form>
 

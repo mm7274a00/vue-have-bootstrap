@@ -54,7 +54,7 @@ export default {
         <label for="">電話</label>
         <input type="text" v-model="signInfo.phone">
         <label for="">email</label>
-        <input type="text" v-model="signInfo.email">
+        <input type="email" v-model="signInfo.email">
         <label for="">地址</label>
         <input type="text" v-model="signInfo.address">
         <label for="">畢業學校</label>
@@ -84,6 +84,9 @@ export default {
 
     <div class="text">
         <h4>如左側範例：</h4> 
+        <p>。 建立好父子層關係，宣告方法及變數</p>
+        <p>。 於Props表單頁面（父層）填寫資料，點擊Next即執行方法</p>
+        <p>。 子層接收到 props:[] 內的變數資料，即可進行顯示</p>
 
     </div>
 </div>

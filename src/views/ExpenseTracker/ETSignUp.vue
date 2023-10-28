@@ -2,7 +2,7 @@
 export default {
     data(){
         return{
-            signArr:[],
+            // signArr:[],
             SURe:"",
             signInfo:{
                 SUAccount:"",
@@ -20,11 +20,9 @@ export default {
             }
             //進行兩個密碼欄未驗證是否相符，如相符則傳送至網頁暫存資料
             if (this.signInfo.SUPasword == this.SURe){ 
-                const key = this.signInfo.SUAccount;
-                this.signArr.push(this.signInfo)
+                // this.signArr.push(this.signInfo)
                 localStorage.setItem(this.signInfo.SUAccount, JSON.stringify(this.signInfo.SUPasword));
                 console.log(this.signInfo);
-
                 // alert("註冊成功")
                 // this.$router.push({path:'/ETLogin'})
             }

@@ -14,15 +14,15 @@ export default {
     methods:{
         login(){
             this.dataAc = JSON.parse(localStorage.getItem(this.logInfo.LogAc))
-            if( this.logInfo.LogAc == this.dataAc){
+            if( this.logInfo.LogAc === this.dataAc){
             console.log(this.logInfo);
             //跳出提示並轉跳頁面至記帳程式
             alert("登入成功")
             this.$router.push({path:'/ExpenseTracker'})
             }
-            else{
-                alert("登入失敗")
-            }
+            // else{
+            //     alert("登入失敗")
+            // }
         },
     }
 }

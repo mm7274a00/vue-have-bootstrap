@@ -20,9 +20,9 @@ export default {
             alert("登入成功")
             this.$router.push({path:'/ExpenseTracker'})
             }
-            // else{
-            //     alert("登入失敗")
-            // }
+            else{
+                alert("登入失敗")
+            }
         },
     }
 }

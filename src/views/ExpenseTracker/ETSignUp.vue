@@ -23,8 +23,8 @@ export default {
                 // this.signArr.push(this.signInfo)
                 localStorage.setItem(this.signInfo.SUAccount, JSON.stringify(this.signInfo.SUPasword));
                 console.log(this.signInfo);
-                // alert("註冊成功")
-                // this.$router.push({path:'/ETLogin'})
+                alert("註冊成功")
+                this.$router.push({path:'/ETLogin'})
             }
             else{
                 alert("兩欄密碼不相符")

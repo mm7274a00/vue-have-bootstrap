@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-    <h1>Props：</h1>
+    <h1>Props</h1>
     <p>。父傳子，為單一數據流</p>
     <p>。不應使用 input 綁 v-model，此為 Vue 的 Bug，容易竄改資料</p>
     <p>。宣告props:["變數"]，顯示值"{ { this.變數} }"</p>

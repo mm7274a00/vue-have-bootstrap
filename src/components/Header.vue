@@ -39,7 +39,7 @@ export default {
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" @click="">
             <li><a class="down practice green1" href="/Green1">前端練習1</a></li>
             <li><a class="down practice green1" href="/Green2">前端練習1(2)</a></li>
-            <li><a class="down practice guessNumber link2" href="/GuessNumber">猜數字</a></li>
+            <!-- <li><a class="down practice guessNumber link2" href="/GuessNumber">猜數字</a></li> -->
             <li><a class="down practice sweet" href="/Sweet">甜點</a></li>
             <li><a class="down fall" href="/Fall">瀑布流</a></li>
             </ul>
@@ -58,7 +58,7 @@ export default {
             <!-- <RouterLink to="/Emit" class="Emit link" :class="{'cass' : this.location === 3}">Emit</RouterLink>
             <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink> -->
             <RouterLink to="/HW/HwHome" class="HwHome link">房地產</RouterLink>
-            <RouterLink to="/Notes" class="Notes link">Notes</RouterLink>
+            <RouterLink to="/Notes" class="Notes link">Note</RouterLink>
             
             </ul>
         </div>
@@ -75,6 +75,7 @@ export default {
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
         <div class="accordion-body">
         <a button type="button" class="vueBtn" href="/DataFlow">DataFlow</a>
+        <!-- <RouterLink to="/Pinia" class="Pinia link" :class="{'cass' : this.location === 2}">Pinia</RouterLink> -->
         <a button type="button" class="vueBtn" :class="{'cass' : this.location === 3}" href="/Emit">Emit  </a>
         <a button type="button" class="vueBtn" :class="{'cass' : this.location === 2}" href="/Pinia">Pinia</a>
         <a button type="button" class="vueBtn" href="/Props">Props</a>

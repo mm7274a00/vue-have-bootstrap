@@ -4,7 +4,7 @@
 
 <template>
 
-<h1>Notes</h1>
+<h1>Note</h1>
 <br>
 
 <div class="fontawesome">
